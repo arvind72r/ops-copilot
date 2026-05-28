@@ -1,0 +1,41 @@
+# Environment & secrets — NEVER commit these
+.env
+.env.local
+*.env
+secrets.json
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+venv/
+env/
+.venv/
+*.egg-info/
+dist/
+build/
+
+# Vector stores (large binary files — regenerate locally)
+data/vectorstore/
+*.chroma/
+chroma_db/
+
+# Logs — contain interaction data
+logs/
+*.log
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+notebooks/.ipynb_checkpoints/
+
+# macOS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+
+# Test results
+tests/results/

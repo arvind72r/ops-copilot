@@ -1,0 +1,5 @@
+severity,sla_mttr_minutes,description
+P1,60,Critical — full outage
+P2,240,High — major degradation
+P3,1440,Medium — partial impact
+P4,4320,Low — cosmetic / minor

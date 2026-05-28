@@ -1,0 +1,11 @@
+service_name,team_owner,environment,uptime_pct_30d,avg_mttr_minutes,open_incidents,last_p1_date,criticality
+auth-service,Platform,Production,96.42,102,3,2025-11-09,Medium
+payments-api,Core,Production,97.84,180,1,2026-03-12,Critical
+user-portal,Core,Production,97.8,55,2,2025-11-14,Critical
+notification-service,Core,Production,97.73,76,2,2026-04-22,Critical
+database-cluster,Data,Production,97.11,100,1,2025-10-16,Medium
+api-gateway,Payments,Production,97.73,148,2,2025-12-31,Critical
+reporting-engine,Platform,Production,95.56,53,4,2026-04-10,Critical
+inventory-service,Core,Production,99.76,44,0,2026-01-08,Medium
+search-service,Identity,Production,96.54,92,3,2025-10-20,Critical
+email-relay,Platform,Production,99.15,99,2,2026-01-30,High

@@ -1,0 +1,30 @@
+PAYMENTS-API RUNBOOK — NovaTech IT Operations
+=============================================
+Service: payments-api
+Owner: Payments Team
+Criticality: Critical
+
+COMMON FAILURE MODES
+---------------------
+1. Third-Party API Timeout
+   - Symptom: Payment processing latency > 5s, timeout errors in logs
+   - Detection: Check upstream gateway health dashboard
+   - Resolution: Enable fallback payment processor (requires payments team)
+   - SLA: P1 — resolve within 60 minutes
+
+2. Database Connection Exhaustion
+   - Symptom: Transaction failures, HTTP 500 on /process endpoint
+   - Detection: Check connection pool metrics
+   - Resolution: Scale connection pool or restart pool manager
+
+3. DDoS Attack Pattern
+   - Symptom: Request rate > 10x baseline, unusual geo distribution
+   - Detection: WAF dashboard shows spike
+   - Resolution: Enable rate limiting rules, page security team
+
+ESCALATION PATH
+---------------
+L1 → L2 (10 min) → Payments On-Call (20 min) → Payments Engineering Lead (30 min)
+
+IMPORTANT: Payments-api outages must be communicated to Finance team
+within 15 minutes of P1 declaration.

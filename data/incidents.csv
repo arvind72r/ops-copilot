@@ -1,0 +1,501 @@
+incident_id,service,severity,status,root_cause,opened_at,resolved_at,mttr_minutes,sla_minutes,sla_breached,assigned_to,notes
+INC-0001,notification-service,P3,Resolved,Upstream dependency failure,2025-04-19 09:10:31,2025-04-20 18:43:31,2013,1440,Yes,ANL-005,Incident on notification-service. Root cause: Upstream dependency failure.
+INC-0002,payments-api,P2,In Progress,Upstream dependency failure,2025-06-30 17:06:48,,,240,No,ANL-005,Incident on payments-api. Root cause: Upstream dependency failure.
+INC-0003,search-service,P1,Open,Disk space exhaustion,2025-06-21 05:18:39,,,60,No,ANL-005,Incident on search-service. Root cause: Disk space exhaustion.
+INC-0004,reporting-engine,P2,Resolved,DDoS attack pattern,2025-08-04 19:53:50,2025-08-04 21:33:50,100,240,No,ANL-002,Incident on reporting-engine. Root cause: DDoS attack pattern.
+INC-0005,reporting-engine,P4,Resolved,Database connection exhaustion,2025-10-06 19:51:38,2025-10-07 20:10:38,1459,4320,No,ANL-005,Incident on reporting-engine. Root cause: Database connection exhaustion.
+INC-0006,search-service,P2,Resolved,Database connection exhaustion,2025-10-22 00:23:32,2025-10-22 06:30:32,367,240,Yes,ANL-005,Incident on search-service. Root cause: Database connection exhaustion.
+INC-0007,auth-service,P2,Resolved,Upstream dependency failure,2025-02-24 00:36:07,2025-02-24 03:08:07,152,240,No,ANL-002,Incident on auth-service. Root cause: Upstream dependency failure.
+INC-0008,payments-api,P4,Open,Disk space exhaustion,2025-08-04 21:48:12,,,4320,No,ANL-003,Incident on payments-api. Root cause: Disk space exhaustion.
+INC-0009,database-cluster,P2,Resolved,Database connection exhaustion,2026-04-19 03:01:29,2026-04-19 06:52:29,231,240,No,ANL-005,Incident on database-cluster. Root cause: Database connection exhaustion.
+INC-0010,database-cluster,P3,Resolved,CPU spike from batch job,2025-06-20 13:55:24,2025-06-22 03:02:24,2227,1440,Yes,ANL-001,Incident on database-cluster. Root cause: CPU spike from batch job.
+INC-0011,payments-api,P2,Resolved,Misconfiguration after deploy,2025-02-21 09:50:42,2025-02-21 15:20:42,330,240,Yes,ANL-005,Incident on payments-api. Root cause: Misconfiguration after deploy.
+INC-0012,inventory-service,P4,Open,Disk space exhaustion,2026-05-15 07:37:38,,,4320,No,ANL-002,Incident on inventory-service. Root cause: Disk space exhaustion.
+INC-0013,search-service,P2,Open,Misconfiguration after deploy,2026-03-31 01:28:21,,,240,No,ANL-005,Incident on search-service. Root cause: Misconfiguration after deploy.
+INC-0014,auth-service,P3,Resolved,Network packet loss,2025-03-12 14:40:27,2025-03-13 19:33:27,1733,1440,Yes,ANL-001,Incident on auth-service. Root cause: Network packet loss.
+INC-0015,reporting-engine,P2,Open,Third-party API timeout,2025-02-19 08:14:32,,,240,No,ANL-004,Incident on reporting-engine. Root cause: Third-party API timeout.
+INC-0016,search-service,P3,In Progress,Memory leak,2025-03-30 23:23:57,,,1440,No,ANL-003,Incident on search-service. Root cause: Memory leak.
+INC-0017,reporting-engine,P4,Resolved,Certificate expiry,2025-12-19 10:01:22,2025-12-21 00:03:22,2282,4320,No,ANL-003,Incident on reporting-engine. Root cause: Certificate expiry.
+INC-0018,payments-api,P4,In Progress,Misconfiguration after deploy,2026-05-12 06:52:54,,,4320,No,ANL-005,Incident on payments-api. Root cause: Misconfiguration after deploy.
+INC-0019,search-service,P2,In Progress,CPU spike from batch job,2025-01-01 10:39:39,,,240,No,ANL-003,Incident on search-service. Root cause: CPU spike from batch job.
+INC-0020,database-cluster,P3,Resolved,Upstream dependency failure,2025-02-14 23:48:12,2025-02-16 12:21:12,2193,1440,Yes,ANL-005,Incident on database-cluster. Root cause: Upstream dependency failure.
+INC-0021,auth-service,P4,Resolved,CPU spike from batch job,2025-04-08 16:20:45,2025-04-14 10:51:45,8311,4320,Yes,ANL-004,Incident on auth-service. Root cause: CPU spike from batch job.
+INC-0022,payments-api,P4,Resolved,CPU spike from batch job,2025-06-06 05:43:39,2025-06-11 15:39:39,7796,4320,Yes,ANL-004,Incident on payments-api. Root cause: CPU spike from batch job.
+INC-0023,search-service,P4,Resolved,Network packet loss,2025-04-04 23:40:54,2025-04-06 23:34:54,2874,4320,No,ANL-002,Incident on search-service. Root cause: Network packet loss.
+INC-0024,notification-service,P1,Resolved,Third-party API timeout,2025-06-21 01:08:58,2025-06-21 02:53:58,105,60,Yes,ANL-001,Incident on notification-service. Root cause: Third-party API timeout.
+INC-0025,auth-service,P3,In Progress,DDoS attack pattern,2025-02-25 00:52:36,,,1440,No,ANL-002,Incident on auth-service. Root cause: DDoS attack pattern.
+INC-0026,user-portal,P2,Open,Third-party API timeout,2026-03-24 13:21:49,,,240,No,ANL-002,Incident on user-portal. Root cause: Third-party API timeout.
+INC-0027,payments-api,P4,Open,Database connection exhaustion,2026-05-27 20:19:43,,,4320,No,ANL-003,Incident on payments-api. Root cause: Database connection exhaustion.
+INC-0028,auth-service,P3,Resolved,Memory leak,2025-11-09 17:24:16,2025-11-10 01:14:16,470,1440,No,ANL-001,Incident on auth-service. Root cause: Memory leak.
+INC-0029,user-portal,P2,Resolved,Disk space exhaustion,2025-05-23 12:27:53,2025-05-23 18:31:53,364,240,Yes,ANL-004,Incident on user-portal. Root cause: Disk space exhaustion.
+INC-0030,search-service,P2,In Progress,Database connection exhaustion,2025-02-09 07:02:05,,,240,No,ANL-001,Incident on search-service. Root cause: Database connection exhaustion.
+INC-0031,user-portal,P4,Open,Disk space exhaustion,2026-01-13 05:00:24,,,4320,No,ANL-002,Incident on user-portal. Root cause: Disk space exhaustion.
+INC-0032,reporting-engine,P4,Resolved,Memory leak,2025-10-31 05:59:20,2025-11-01 11:13:20,1754,4320,No,ANL-004,Incident on reporting-engine. Root cause: Memory leak.
+INC-0033,payments-api,P2,Resolved,Certificate expiry,2025-05-28 11:57:10,2025-05-28 15:19:10,202,240,No,ANL-002,Incident on payments-api. Root cause: Certificate expiry.
+INC-0034,auth-service,P4,Resolved,DDoS attack pattern,2025-02-14 09:38:16,2025-02-16 16:38:16,3300,4320,No,ANL-005,Incident on auth-service. Root cause: DDoS attack pattern.
+INC-0035,auth-service,P3,Resolved,CPU spike from batch job,2025-03-04 05:23:09,2025-03-04 16:45:09,682,1440,No,ANL-001,Incident on auth-service. Root cause: CPU spike from batch job.
+INC-0036,reporting-engine,P3,Resolved,Database connection exhaustion,2026-03-19 11:31:09,2026-03-20 01:32:09,841,1440,No,ANL-005,Incident on reporting-engine. Root cause: Database connection exhaustion.
+INC-0037,email-relay,P3,Resolved,Third-party API timeout,2026-02-11 01:22:34,2026-02-11 21:40:34,1218,1440,No,ANL-003,Incident on email-relay. Root cause: Third-party API timeout.
+INC-0038,database-cluster,P2,Resolved,Disk space exhaustion,2025-04-12 15:44:52,2025-04-12 17:45:52,121,240,No,ANL-004,Incident on database-cluster. Root cause: Disk space exhaustion.
+INC-0039,auth-service,P3,In Progress,Network packet loss,2026-04-28 11:14:51,,,1440,No,ANL-001,Incident on auth-service. Root cause: Network packet loss.
+INC-0040,user-portal,P1,Resolved,DDoS attack pattern,2025-02-23 10:21:46,2025-02-23 11:47:46,86,60,Yes,ANL-003,Incident on user-portal. Root cause: DDoS attack pattern.
+INC-0041,database-cluster,P2,In Progress,Third-party API timeout,2026-05-23 23:00:07,,,240,No,ANL-001,Incident on database-cluster. Root cause: Third-party API timeout.
+INC-0042,auth-service,P3,Resolved,Misconfiguration after deploy,2025-03-31 15:44:46,2025-04-01 01:16:46,572,1440,No,ANL-005,Incident on auth-service. Root cause: Misconfiguration after deploy.
+INC-0043,api-gateway,P2,Resolved,Upstream dependency failure,2026-05-08 15:03:08,2026-05-08 20:06:08,303,240,Yes,ANL-005,Incident on api-gateway. Root cause: Upstream dependency failure.
+INC-0044,payments-api,P3,Resolved,Disk space exhaustion,2025-08-03 21:41:35,2025-08-04 05:25:35,464,1440,No,ANL-001,Incident on payments-api. Root cause: Disk space exhaustion.
+INC-0045,user-portal,P3,Open,Network packet loss,2026-03-05 12:04:06,,,1440,No,ANL-005,Incident on user-portal. Root cause: Network packet loss.
+INC-0046,user-portal,P1,Resolved,CPU spike from batch job,2025-01-28 23:36:47,2025-01-29 01:30:47,114,60,Yes,ANL-005,Incident on user-portal. Root cause: CPU spike from batch job.
+INC-0047,database-cluster,P3,Resolved,DDoS attack pattern,2025-01-31 23:41:39,2025-02-01 07:06:39,445,1440,No,ANL-002,Incident on database-cluster. Root cause: DDoS attack pattern.
+INC-0048,search-service,P3,Resolved,Disk space exhaustion,2026-04-28 01:58:08,2026-04-28 20:02:08,1084,1440,No,ANL-002,Incident on search-service. Root cause: Disk space exhaustion.
+INC-0049,auth-service,P4,Resolved,Memory leak,2025-05-20 07:31:30,2025-05-21 13:36:30,1805,4320,No,ANL-004,Incident on auth-service. Root cause: Memory leak.
+INC-0050,database-cluster,P4,Open,Certificate expiry,2025-03-25 23:02:54,,,4320,No,ANL-001,Incident on database-cluster. Root cause: Certificate expiry.
+INC-0051,api-gateway,P4,Resolved,Misconfiguration after deploy,2025-06-26 18:41:14,2025-07-02 09:41:14,8100,4320,Yes,ANL-001,Incident on api-gateway. Root cause: Misconfiguration after deploy.
+INC-0052,payments-api,P3,In Progress,Misconfiguration after deploy,2025-09-30 17:50:17,,,1440,No,ANL-004,Incident on payments-api. Root cause: Misconfiguration after deploy.
+INC-0053,auth-service,P3,Resolved,Database connection exhaustion,2025-07-22 21:24:15,2025-07-23 14:42:15,1038,1440,No,ANL-005,Incident on auth-service. Root cause: Database connection exhaustion.
+INC-0054,email-relay,P4,Resolved,Disk space exhaustion,2025-09-26 12:04:29,2025-09-30 03:02:29,5218,4320,Yes,ANL-004,Incident on email-relay. Root cause: Disk space exhaustion.
+INC-0055,payments-api,P3,Resolved,Upstream dependency failure,2025-07-17 20:22:18,2025-07-18 15:30:18,1148,1440,No,ANL-004,Incident on payments-api. Root cause: Upstream dependency failure.
+INC-0056,auth-service,P1,Resolved,DDoS attack pattern,2025-12-01 23:57:58,2025-12-02 00:46:58,49,60,No,ANL-003,Incident on auth-service. Root cause: DDoS attack pattern.
+INC-0057,database-cluster,P3,Open,CPU spike from batch job,2025-08-29 05:29:02,,,1440,No,ANL-003,Incident on database-cluster. Root cause: CPU spike from batch job.
+INC-0058,notification-service,P3,Resolved,Disk space exhaustion,2025-10-22 11:46:48,2025-10-23 16:16:48,1710,1440,Yes,ANL-005,Incident on notification-service. Root cause: Disk space exhaustion.
+INC-0059,database-cluster,P3,Open,Misconfiguration after deploy,2025-06-13 06:05:21,,,1440,No,ANL-005,Incident on database-cluster. Root cause: Misconfiguration after deploy.
+INC-0060,inventory-service,P3,Open,Upstream dependency failure,2026-02-02 00:58:26,,,1440,No,ANL-002,Incident on inventory-service. Root cause: Upstream dependency failure.
+INC-0061,email-relay,P3,Resolved,DDoS attack pattern,2025-03-14 12:51:48,2025-03-16 11:40:48,2809,1440,Yes,ANL-003,Incident on email-relay. Root cause: DDoS attack pattern.
+INC-0062,auth-service,P2,In Progress,Upstream dependency failure,2026-01-05 01:11:00,,,240,No,ANL-001,Incident on auth-service. Root cause: Upstream dependency failure.
+INC-0063,auth-service,P3,Resolved,Network packet loss,2025-11-07 10:04:09,2025-11-07 22:42:09,758,1440,No,ANL-002,Incident on auth-service. Root cause: Network packet loss.
+INC-0064,reporting-engine,P3,In Progress,Upstream dependency failure,2025-05-17 14:45:55,,,1440,No,ANL-004,Incident on reporting-engine. Root cause: Upstream dependency failure.
+INC-0065,inventory-service,P1,In Progress,Certificate expiry,2025-12-27 21:34:39,,,60,No,ANL-005,Incident on inventory-service. Root cause: Certificate expiry.
+INC-0066,payments-api,P3,In Progress,CPU spike from batch job,2025-11-28 11:01:27,,,1440,No,ANL-004,Incident on payments-api. Root cause: CPU spike from batch job.
+INC-0067,inventory-service,P4,Resolved,Misconfiguration after deploy,2025-07-12 00:52:57,2025-07-14 03:16:57,3024,4320,No,ANL-005,Incident on inventory-service. Root cause: Misconfiguration after deploy.
+INC-0068,payments-api,P3,Resolved,Misconfiguration after deploy,2025-07-02 03:16:37,2025-07-03 18:26:37,2350,1440,Yes,ANL-003,Incident on payments-api. Root cause: Misconfiguration after deploy.
+INC-0069,user-portal,P3,Resolved,Upstream dependency failure,2025-10-25 12:17:43,2025-10-25 23:00:43,643,1440,No,ANL-002,Incident on user-portal. Root cause: Upstream dependency failure.
+INC-0070,auth-service,P1,Resolved,Disk space exhaustion,2025-02-18 08:43:01,2025-02-18 09:32:01,49,60,No,ANL-004,Incident on auth-service. Root cause: Disk space exhaustion.
+INC-0071,email-relay,P3,Resolved,Disk space exhaustion,2026-01-06 11:32:48,2026-01-06 18:12:48,400,1440,No,ANL-003,Incident on email-relay. Root cause: Disk space exhaustion.
+INC-0072,search-service,P2,Resolved,CPU spike from batch job,2026-04-14 13:26:35,2026-04-14 16:13:35,167,240,No,ANL-004,Incident on search-service. Root cause: CPU spike from batch job.
+INC-0073,reporting-engine,P2,Resolved,DDoS attack pattern,2025-11-11 01:00:32,2025-11-11 02:07:32,67,240,No,ANL-004,Incident on reporting-engine. Root cause: DDoS attack pattern.
+INC-0074,auth-service,P4,In Progress,Disk space exhaustion,2026-04-05 17:40:51,,,4320,No,ANL-001,Incident on auth-service. Root cause: Disk space exhaustion.
+INC-0075,user-portal,P2,Open,Memory leak,2025-07-22 01:39:54,,,240,No,ANL-003,Incident on user-portal. Root cause: Memory leak.
+INC-0076,database-cluster,P2,Resolved,Disk space exhaustion,2025-07-15 22:40:55,2025-07-16 01:17:55,157,240,No,ANL-004,Incident on database-cluster. Root cause: Disk space exhaustion.
+INC-0077,payments-api,P1,Resolved,Database connection exhaustion,2026-05-22 05:35:14,2026-05-22 06:12:14,37,60,No,ANL-001,Incident on payments-api. Root cause: Database connection exhaustion.
+INC-0078,email-relay,P4,Resolved,Certificate expiry,2025-07-05 06:48:00,2025-07-08 09:44:00,4496,4320,Yes,ANL-004,Incident on email-relay. Root cause: Certificate expiry.
+INC-0079,inventory-service,P3,Resolved,Misconfiguration after deploy,2025-10-14 12:42:16,2025-10-15 02:08:16,806,1440,No,ANL-005,Incident on inventory-service. Root cause: Misconfiguration after deploy.
+INC-0080,user-portal,P3,In Progress,Misconfiguration after deploy,2025-03-25 23:06:24,,,1440,No,ANL-001,Incident on user-portal. Root cause: Misconfiguration after deploy.
+INC-0081,reporting-engine,P4,In Progress,Upstream dependency failure,2025-03-01 00:40:37,,,4320,No,ANL-002,Incident on reporting-engine. Root cause: Upstream dependency failure.
+INC-0082,email-relay,P2,Resolved,Database connection exhaustion,2026-03-16 13:44:50,2026-03-16 17:39:50,235,240,No,ANL-003,Incident on email-relay. Root cause: Database connection exhaustion.
+INC-0083,search-service,P3,Open,DDoS attack pattern,2025-01-10 19:51:11,,,1440,No,ANL-004,Incident on search-service. Root cause: DDoS attack pattern.
+INC-0084,auth-service,P2,Resolved,Certificate expiry,2025-12-05 06:04:07,2025-12-05 09:46:07,222,240,No,ANL-005,Incident on auth-service. Root cause: Certificate expiry.
+INC-0085,inventory-service,P4,Resolved,Disk space exhaustion,2026-04-06 04:31:38,2026-04-11 22:41:38,8290,4320,Yes,ANL-003,Incident on inventory-service. Root cause: Disk space exhaustion.
+INC-0086,database-cluster,P4,Open,Network packet loss,2025-07-09 09:56:38,,,4320,No,ANL-005,Incident on database-cluster. Root cause: Network packet loss.
+INC-0087,inventory-service,P3,Open,DDoS attack pattern,2025-05-22 05:44:26,,,1440,No,ANL-002,Incident on inventory-service. Root cause: DDoS attack pattern.
+INC-0088,payments-api,P3,Resolved,Misconfiguration after deploy,2026-03-08 16:41:44,2026-03-10 02:23:44,2022,1440,Yes,ANL-005,Incident on payments-api. Root cause: Misconfiguration after deploy.
+INC-0089,inventory-service,P4,Open,CPU spike from batch job,2025-07-06 15:57:46,,,4320,No,ANL-004,Incident on inventory-service. Root cause: CPU spike from batch job.
+INC-0090,notification-service,P3,Resolved,Disk space exhaustion,2025-07-08 23:32:13,2025-07-10 09:44:13,2052,1440,Yes,ANL-005,Incident on notification-service. Root cause: Disk space exhaustion.
+INC-0091,auth-service,P3,Resolved,CPU spike from batch job,2025-09-14 22:23:48,2025-09-15 16:07:48,1064,1440,No,ANL-004,Incident on auth-service. Root cause: CPU spike from batch job.
+INC-0092,notification-service,P2,In Progress,DDoS attack pattern,2025-04-03 20:39:42,,,240,No,ANL-002,Incident on notification-service. Root cause: DDoS attack pattern.
+INC-0093,email-relay,P2,Resolved,CPU spike from batch job,2026-04-09 12:59:08,2026-04-09 15:09:08,130,240,No,ANL-001,Incident on email-relay. Root cause: CPU spike from batch job.
+INC-0094,user-portal,P4,In Progress,Misconfiguration after deploy,2025-01-11 23:44:40,,,4320,No,ANL-002,Incident on user-portal. Root cause: Misconfiguration after deploy.
+INC-0095,database-cluster,P2,Open,Certificate expiry,2026-05-11 10:45:07,,,240,No,ANL-001,Incident on database-cluster. Root cause: Certificate expiry.
+INC-0096,inventory-service,P4,Resolved,Network packet loss,2025-09-22 15:13:08,2025-09-24 17:15:08,3002,4320,No,ANL-001,Incident on inventory-service. Root cause: Network packet loss.
+INC-0097,payments-api,P2,Resolved,Disk space exhaustion,2026-01-17 22:49:13,2026-01-18 00:18:13,89,240,No,ANL-005,Incident on payments-api. Root cause: Disk space exhaustion.
+INC-0098,auth-service,P3,Resolved,Misconfiguration after deploy,2025-03-08 03:53:13,2025-03-09 09:08:13,1755,1440,Yes,ANL-001,Incident on auth-service. Root cause: Misconfiguration after deploy.
+INC-0099,payments-api,P3,Open,Disk space exhaustion,2025-12-16 22:11:53,,,1440,No,ANL-003,Incident on payments-api. Root cause: Disk space exhaustion.
+INC-0100,email-relay,P4,In Progress,Third-party API timeout,2025-02-16 18:46:27,,,4320,No,ANL-001,Incident on email-relay. Root cause: Third-party API timeout.
+INC-0101,database-cluster,P4,Resolved,Database connection exhaustion,2025-05-02 23:45:23,2025-05-07 04:43:23,6058,4320,Yes,ANL-002,Incident on database-cluster. Root cause: Database connection exhaustion.
+INC-0102,inventory-service,P3,Resolved,Third-party API timeout,2025-12-31 23:48:12,2026-01-02 13:54:12,2286,1440,Yes,ANL-001,Incident on inventory-service. Root cause: Third-party API timeout.
+INC-0103,payments-api,P2,In Progress,Upstream dependency failure,2025-07-25 11:39:20,,,240,No,ANL-002,Incident on payments-api. Root cause: Upstream dependency failure.
+INC-0104,database-cluster,P3,Resolved,Certificate expiry,2025-02-25 11:10:33,2025-02-25 22:15:33,665,1440,No,ANL-002,Incident on database-cluster. Root cause: Certificate expiry.
+INC-0105,auth-service,P4,Open,Network packet loss,2025-04-07 14:07:12,,,4320,No,ANL-003,Incident on auth-service. Root cause: Network packet loss.
+INC-0106,search-service,P3,Resolved,Network packet loss,2025-12-07 00:25:00,2025-12-07 23:29:00,1384,1440,No,ANL-005,Incident on search-service. Root cause: Network packet loss.
+INC-0107,email-relay,P1,Resolved,Misconfiguration after deploy,2025-01-21 02:09:23,2025-01-21 02:44:23,35,60,No,ANL-002,Incident on email-relay. Root cause: Misconfiguration after deploy.
+INC-0108,email-relay,P4,In Progress,Memory leak,2025-07-29 08:02:58,,,4320,No,ANL-001,Incident on email-relay. Root cause: Memory leak.
+INC-0109,inventory-service,P4,In Progress,Misconfiguration after deploy,2025-05-21 23:12:10,,,4320,No,ANL-004,Incident on inventory-service. Root cause: Misconfiguration after deploy.
+INC-0110,payments-api,P3,Resolved,DDoS attack pattern,2025-11-14 04:09:36,2025-11-14 13:15:36,546,1440,No,ANL-003,Incident on payments-api. Root cause: DDoS attack pattern.
+INC-0111,reporting-engine,P3,Open,Network packet loss,2025-08-12 20:46:08,,,1440,No,ANL-005,Incident on reporting-engine. Root cause: Network packet loss.
+INC-0112,auth-service,P1,In Progress,Database connection exhaustion,2025-11-10 22:22:08,,,60,No,ANL-001,Incident on auth-service. Root cause: Database connection exhaustion.
+INC-0113,auth-service,P3,Resolved,Upstream dependency failure,2026-02-07 16:24:38,2026-02-08 12:30:38,1206,1440,No,ANL-005,Incident on auth-service. Root cause: Upstream dependency failure.
+INC-0114,auth-service,P4,In Progress,Upstream dependency failure,2025-07-27 10:17:20,,,4320,No,ANL-002,Incident on auth-service. Root cause: Upstream dependency failure.
+INC-0115,inventory-service,P4,In Progress,Database connection exhaustion,2025-01-23 10:09:55,,,4320,No,ANL-002,Incident on inventory-service. Root cause: Database connection exhaustion.
+INC-0116,search-service,P3,Resolved,Disk space exhaustion,2025-03-14 09:32:43,2025-03-14 16:00:43,388,1440,No,ANL-001,Incident on search-service. Root cause: Disk space exhaustion.
+INC-0117,inventory-service,P3,Resolved,Misconfiguration after deploy,2026-01-31 06:03:42,2026-02-01 11:28:42,1765,1440,Yes,ANL-004,Incident on inventory-service. Root cause: Misconfiguration after deploy.
+INC-0118,inventory-service,P4,Open,CPU spike from batch job,2025-04-23 08:19:18,,,4320,No,ANL-002,Incident on inventory-service. Root cause: CPU spike from batch job.
+INC-0119,auth-service,P4,Resolved,Misconfiguration after deploy,2025-11-19 07:05:14,2025-11-20 10:24:14,1639,4320,No,ANL-005,Incident on auth-service. Root cause: Misconfiguration after deploy.
+INC-0120,database-cluster,P2,Open,Third-party API timeout,2026-03-27 10:33:19,,,240,No,ANL-002,Incident on database-cluster. Root cause: Third-party API timeout.
+INC-0121,payments-api,P3,Open,CPU spike from batch job,2025-10-20 23:42:18,,,1440,No,ANL-003,Incident on payments-api. Root cause: CPU spike from batch job.
+INC-0122,email-relay,P4,Open,Disk space exhaustion,2025-07-01 09:55:10,,,4320,No,ANL-001,Incident on email-relay. Root cause: Disk space exhaustion.
+INC-0123,reporting-engine,P3,Resolved,Certificate expiry,2026-01-20 17:35:42,2026-01-21 12:35:42,1140,1440,No,ANL-002,Incident on reporting-engine. Root cause: Certificate expiry.
+INC-0124,inventory-service,P3,Open,Database connection exhaustion,2026-02-13 12:26:19,,,1440,No,ANL-001,Incident on inventory-service. Root cause: Database connection exhaustion.
+INC-0125,payments-api,P3,Resolved,Network packet loss,2025-07-25 20:22:57,2025-07-26 07:38:57,676,1440,No,ANL-005,Incident on payments-api. Root cause: Network packet loss.
+INC-0126,auth-service,P3,Open,Disk space exhaustion,2025-09-03 22:59:30,,,1440,No,ANL-005,Incident on auth-service. Root cause: Disk space exhaustion.
+INC-0127,database-cluster,P1,Open,Upstream dependency failure,2025-03-12 04:47:34,,,60,No,ANL-001,Incident on database-cluster. Root cause: Upstream dependency failure.
+INC-0128,inventory-service,P4,Resolved,Certificate expiry,2025-08-21 14:27:08,2025-08-22 15:18:08,1491,4320,No,ANL-001,Incident on inventory-service. Root cause: Certificate expiry.
+INC-0129,api-gateway,P3,Resolved,Disk space exhaustion,2025-04-24 01:37:03,2025-04-25 14:01:03,2184,1440,Yes,ANL-005,Incident on api-gateway. Root cause: Disk space exhaustion.
+INC-0130,user-portal,P3,In Progress,Certificate expiry,2025-03-03 08:04:36,,,1440,No,ANL-004,Incident on user-portal. Root cause: Certificate expiry.
+INC-0131,user-portal,P3,Resolved,Upstream dependency failure,2025-12-25 04:27:26,2025-12-27 00:31:26,2644,1440,Yes,ANL-004,Incident on user-portal. Root cause: Upstream dependency failure.
+INC-0132,payments-api,P2,Resolved,Misconfiguration after deploy,2026-03-01 13:19:40,2026-03-01 20:54:40,455,240,Yes,ANL-001,Incident on payments-api. Root cause: Misconfiguration after deploy.
+INC-0133,auth-service,P3,Resolved,Misconfiguration after deploy,2025-12-21 20:02:12,2025-12-22 12:14:12,972,1440,No,ANL-002,Incident on auth-service. Root cause: Misconfiguration after deploy.
+INC-0134,notification-service,P4,Resolved,Disk space exhaustion,2026-03-21 05:24:42,2026-03-22 06:40:42,1516,4320,No,ANL-005,Incident on notification-service. Root cause: Disk space exhaustion.
+INC-0135,reporting-engine,P2,In Progress,Misconfiguration after deploy,2025-01-07 06:57:25,,,240,No,ANL-001,Incident on reporting-engine. Root cause: Misconfiguration after deploy.
+INC-0136,notification-service,P4,Resolved,Third-party API timeout,2025-10-01 15:44:19,2025-10-03 05:16:19,2252,4320,No,ANL-002,Incident on notification-service. Root cause: Third-party API timeout.
+INC-0137,payments-api,P3,Open,Memory leak,2025-08-28 22:55:34,,,1440,No,ANL-001,Incident on payments-api. Root cause: Memory leak.
+INC-0138,database-cluster,P3,Resolved,DDoS attack pattern,2025-11-19 17:32:20,2025-11-20 02:36:20,544,1440,No,ANL-002,Incident on database-cluster. Root cause: DDoS attack pattern.
+INC-0139,search-service,P2,Resolved,CPU spike from batch job,2025-07-31 16:16:40,2025-07-31 18:49:40,153,240,No,ANL-003,Incident on search-service. Root cause: CPU spike from batch job.
+INC-0140,auth-service,P4,Resolved,Database connection exhaustion,2025-12-30 18:19:47,2026-01-01 08:27:47,2288,4320,No,ANL-002,Incident on auth-service. Root cause: Database connection exhaustion.
+INC-0141,search-service,P4,Open,DDoS attack pattern,2025-03-12 03:22:03,,,4320,No,ANL-001,Incident on search-service. Root cause: DDoS attack pattern.
+INC-0142,database-cluster,P2,Resolved,Third-party API timeout,2025-10-23 22:49:48,2025-10-24 04:33:48,344,240,Yes,ANL-001,Incident on database-cluster. Root cause: Third-party API timeout.
+INC-0143,payments-api,P3,Resolved,Upstream dependency failure,2026-05-19 01:06:55,2026-05-19 18:17:55,1031,1440,No,ANL-004,Incident on payments-api. Root cause: Upstream dependency failure.
+INC-0144,payments-api,P4,Resolved,Certificate expiry,2025-02-05 05:19:32,2025-02-07 03:11:32,2752,4320,No,ANL-003,Incident on payments-api. Root cause: Certificate expiry.
+INC-0145,search-service,P4,Open,Certificate expiry,2025-10-29 20:53:00,,,4320,No,ANL-003,Incident on search-service. Root cause: Certificate expiry.
+INC-0146,email-relay,P3,Resolved,Certificate expiry,2025-11-19 06:00:29,2025-11-20 02:18:29,1218,1440,No,ANL-004,Incident on email-relay. Root cause: Certificate expiry.
+INC-0147,auth-service,P3,Open,DDoS attack pattern,2025-06-18 18:12:01,,,1440,No,ANL-004,Incident on auth-service. Root cause: DDoS attack pattern.
+INC-0148,api-gateway,P4,Resolved,CPU spike from batch job,2026-05-16 20:26:34,2026-05-17 21:12:34,1486,4320,No,ANL-001,Incident on api-gateway. Root cause: CPU spike from batch job.
+INC-0149,inventory-service,P3,In Progress,Database connection exhaustion,2025-06-14 17:56:20,,,1440,No,ANL-001,Incident on inventory-service. Root cause: Database connection exhaustion.
+INC-0150,email-relay,P1,In Progress,Upstream dependency failure,2025-02-23 06:59:09,,,60,No,ANL-002,Incident on email-relay. Root cause: Upstream dependency failure.
+INC-0151,api-gateway,P3,Resolved,Certificate expiry,2026-04-08 21:54:10,2026-04-09 11:51:10,837,1440,No,ANL-003,Incident on api-gateway. Root cause: Certificate expiry.
+INC-0152,search-service,P4,Resolved,Misconfiguration after deploy,2025-05-16 12:51:43,2025-05-20 06:45:43,5394,4320,Yes,ANL-001,Incident on search-service. Root cause: Misconfiguration after deploy.
+INC-0153,email-relay,P2,Resolved,DDoS attack pattern,2025-01-13 06:10:50,2025-01-13 08:10:50,120,240,No,ANL-003,Incident on email-relay. Root cause: DDoS attack pattern.
+INC-0154,payments-api,P1,Open,Database connection exhaustion,2026-01-05 21:52:05,,,60,No,ANL-003,Incident on payments-api. Root cause: Database connection exhaustion.
+INC-0155,notification-service,P3,In Progress,Third-party API timeout,2025-02-03 16:22:58,,,1440,No,ANL-003,Incident on notification-service. Root cause: Third-party API timeout.
+INC-0156,inventory-service,P3,Resolved,Disk space exhaustion,2025-11-28 02:18:58,2025-11-28 10:22:58,484,1440,No,ANL-004,Incident on inventory-service. Root cause: Disk space exhaustion.
+INC-0157,api-gateway,P3,Resolved,Third-party API timeout,2025-04-26 05:08:34,2025-04-26 13:53:34,525,1440,No,ANL-002,Incident on api-gateway. Root cause: Third-party API timeout.
+INC-0158,api-gateway,P2,In Progress,Disk space exhaustion,2026-04-10 00:11:28,,,240,No,ANL-003,Incident on api-gateway. Root cause: Disk space exhaustion.
+INC-0159,payments-api,P3,Open,CPU spike from batch job,2025-06-17 00:19:13,,,1440,No,ANL-004,Incident on payments-api. Root cause: CPU spike from batch job.
+INC-0160,reporting-engine,P4,Resolved,Disk space exhaustion,2025-03-15 20:31:42,2025-03-17 21:28:42,2937,4320,No,ANL-004,Incident on reporting-engine. Root cause: Disk space exhaustion.
+INC-0161,auth-service,P3,Resolved,Database connection exhaustion,2025-03-12 20:33:11,2025-03-14 01:55:11,1762,1440,Yes,ANL-001,Incident on auth-service. Root cause: Database connection exhaustion.
+INC-0162,user-portal,P3,In Progress,CPU spike from batch job,2025-02-16 14:07:35,,,1440,No,ANL-005,Incident on user-portal. Root cause: CPU spike from batch job.
+INC-0163,api-gateway,P3,Resolved,Disk space exhaustion,2025-02-09 23:01:27,2025-02-10 19:02:27,1201,1440,No,ANL-005,Incident on api-gateway. Root cause: Disk space exhaustion.
+INC-0164,notification-service,P3,Open,Certificate expiry,2026-05-26 02:27:07,,,1440,No,ANL-002,Incident on notification-service. Root cause: Certificate expiry.
+INC-0165,payments-api,P4,In Progress,Database connection exhaustion,2025-08-05 08:53:16,,,4320,No,ANL-002,Incident on payments-api. Root cause: Database connection exhaustion.
+INC-0166,email-relay,P4,In Progress,Third-party API timeout,2026-05-15 04:46:50,,,4320,No,ANL-001,Incident on email-relay. Root cause: Third-party API timeout.
+INC-0167,auth-service,P3,Resolved,Certificate expiry,2025-08-01 06:07:45,2025-08-01 21:14:45,907,1440,No,ANL-003,Incident on auth-service. Root cause: Certificate expiry.
+INC-0168,auth-service,P3,Resolved,Disk space exhaustion,2025-02-24 01:09:58,2025-02-25 06:12:58,1743,1440,Yes,ANL-001,Incident on auth-service. Root cause: Disk space exhaustion.
+INC-0169,reporting-engine,P2,Resolved,Network packet loss,2025-09-22 18:45:42,2025-09-22 21:21:42,156,240,No,ANL-003,Incident on reporting-engine. Root cause: Network packet loss.
+INC-0170,auth-service,P3,In Progress,Certificate expiry,2025-05-03 06:19:59,,,1440,No,ANL-001,Incident on auth-service. Root cause: Certificate expiry.
+INC-0171,reporting-engine,P3,Open,Network packet loss,2026-04-17 12:43:01,,,1440,No,ANL-004,Incident on reporting-engine. Root cause: Network packet loss.
+INC-0172,api-gateway,P2,Resolved,Disk space exhaustion,2025-03-28 03:08:06,2025-03-28 04:37:06,89,240,No,ANL-005,Incident on api-gateway. Root cause: Disk space exhaustion.
+INC-0173,notification-service,P3,Resolved,Disk space exhaustion,2026-04-11 12:13:37,2026-04-11 19:46:37,453,1440,No,ANL-001,Incident on notification-service. Root cause: Disk space exhaustion.
+INC-0174,database-cluster,P2,Resolved,Misconfiguration after deploy,2025-09-12 20:38:38,2025-09-12 22:13:38,95,240,No,ANL-001,Incident on database-cluster. Root cause: Misconfiguration after deploy.
+INC-0175,auth-service,P3,In Progress,CPU spike from batch job,2025-06-28 17:34:28,,,1440,No,ANL-005,Incident on auth-service. Root cause: CPU spike from batch job.
+INC-0176,payments-api,P4,Resolved,Memory leak,2025-12-05 19:43:21,2025-12-06 18:38:21,1375,4320,No,ANL-004,Incident on payments-api. Root cause: Memory leak.
+INC-0177,reporting-engine,P4,Open,Third-party API timeout,2025-11-11 02:59:20,,,4320,No,ANL-003,Incident on reporting-engine. Root cause: Third-party API timeout.
+INC-0178,user-portal,P2,Resolved,Third-party API timeout,2025-12-24 08:49:40,2025-12-24 14:22:40,333,240,Yes,ANL-001,Incident on user-portal. Root cause: Third-party API timeout.
+INC-0179,email-relay,P3,Resolved,Disk space exhaustion,2026-02-11 23:22:11,2026-02-13 14:24:11,2342,1440,Yes,ANL-004,Incident on email-relay. Root cause: Disk space exhaustion.
+INC-0180,api-gateway,P4,In Progress,Certificate expiry,2025-03-01 07:48:53,,,4320,No,ANL-001,Incident on api-gateway. Root cause: Certificate expiry.
+INC-0181,api-gateway,P3,Resolved,Certificate expiry,2025-07-03 12:22:14,2025-07-05 00:27:14,2165,1440,Yes,ANL-002,Incident on api-gateway. Root cause: Certificate expiry.
+INC-0182,auth-service,P2,Open,Certificate expiry,2026-05-03 17:48:48,,,240,No,ANL-004,Incident on auth-service. Root cause: Certificate expiry.
+INC-0183,email-relay,P4,Resolved,Third-party API timeout,2025-09-09 01:02:17,2025-09-11 01:40:17,2918,4320,No,ANL-002,Incident on email-relay. Root cause: Third-party API timeout.
+INC-0184,database-cluster,P3,Resolved,Third-party API timeout,2025-02-13 15:07:27,2025-02-14 07:27:27,980,1440,No,ANL-005,Incident on database-cluster. Root cause: Third-party API timeout.
+INC-0185,auth-service,P1,Resolved,DDoS attack pattern,2025-08-11 23:30:13,2025-08-11 23:47:13,17,60,No,ANL-001,Incident on auth-service. Root cause: DDoS attack pattern.
+INC-0186,email-relay,P3,Open,CPU spike from batch job,2025-02-01 20:43:07,,,1440,No,ANL-005,Incident on email-relay. Root cause: CPU spike from batch job.
+INC-0187,payments-api,P3,Open,Certificate expiry,2025-02-18 01:24:33,,,1440,No,ANL-001,Incident on payments-api. Root cause: Certificate expiry.
+INC-0188,payments-api,P4,Resolved,CPU spike from batch job,2026-05-17 20:40:55,2026-05-20 15:25:55,4005,4320,No,ANL-001,Incident on payments-api. Root cause: CPU spike from batch job.
+INC-0189,auth-service,P2,Resolved,CPU spike from batch job,2026-04-19 15:35:48,2026-04-19 18:27:48,172,240,No,ANL-003,Incident on auth-service. Root cause: CPU spike from batch job.
+INC-0190,api-gateway,P3,Resolved,Third-party API timeout,2025-02-10 16:09:50,2025-02-12 06:16:50,2287,1440,Yes,ANL-001,Incident on api-gateway. Root cause: Third-party API timeout.
+INC-0191,database-cluster,P3,In Progress,Misconfiguration after deploy,2026-05-25 23:14:29,,,1440,No,ANL-002,Incident on database-cluster. Root cause: Misconfiguration after deploy.
+INC-0192,api-gateway,P3,Open,Misconfiguration after deploy,2026-05-25 13:44:46,,,1440,No,ANL-002,Incident on api-gateway. Root cause: Misconfiguration after deploy.
+INC-0193,search-service,P3,Resolved,Disk space exhaustion,2026-05-15 19:35:01,2026-05-16 12:09:01,994,1440,No,ANL-002,Incident on search-service. Root cause: Disk space exhaustion.
+INC-0194,reporting-engine,P3,Resolved,CPU spike from batch job,2025-10-09 00:57:52,2025-10-09 10:08:52,551,1440,No,ANL-003,Incident on reporting-engine. Root cause: CPU spike from batch job.
+INC-0195,inventory-service,P3,Resolved,Upstream dependency failure,2025-06-25 23:04:06,2025-06-26 16:43:06,1059,1440,No,ANL-002,Incident on inventory-service. Root cause: Upstream dependency failure.
+INC-0196,auth-service,P1,Resolved,CPU spike from batch job,2026-02-13 23:15:39,2026-02-13 23:36:39,21,60,No,ANL-003,Incident on auth-service. Root cause: CPU spike from batch job.
+INC-0197,reporting-engine,P4,Resolved,Certificate expiry,2025-05-07 00:30:26,2025-05-09 11:16:26,3526,4320,No,ANL-005,Incident on reporting-engine. Root cause: Certificate expiry.
+INC-0198,payments-api,P4,Resolved,Disk space exhaustion,2025-10-10 23:01:59,2025-10-16 10:56:59,7915,4320,Yes,ANL-004,Incident on payments-api. Root cause: Disk space exhaustion.
+INC-0199,notification-service,P3,Resolved,CPU spike from batch job,2025-07-05 18:25:26,2025-07-06 15:44:26,1279,1440,No,ANL-004,Incident on notification-service. Root cause: CPU spike from batch job.
+INC-0200,inventory-service,P4,In Progress,Misconfiguration after deploy,2025-10-24 14:37:05,,,4320,No,ANL-005,Incident on inventory-service. Root cause: Misconfiguration after deploy.
+INC-0201,email-relay,P3,Resolved,Certificate expiry,2025-07-14 04:23:51,2025-07-15 11:21:51,1858,1440,Yes,ANL-004,Incident on email-relay. Root cause: Certificate expiry.
+INC-0202,search-service,P4,Resolved,Database connection exhaustion,2025-08-10 09:57:35,2025-08-11 10:57:35,1500,4320,No,ANL-002,Incident on search-service. Root cause: Database connection exhaustion.
+INC-0203,auth-service,P2,Open,Database connection exhaustion,2025-06-22 11:05:18,,,240,No,ANL-003,Incident on auth-service. Root cause: Database connection exhaustion.
+INC-0204,search-service,P4,Open,DDoS attack pattern,2025-07-03 03:13:18,,,4320,No,ANL-001,Incident on search-service. Root cause: DDoS attack pattern.
+INC-0205,api-gateway,P3,Resolved,Certificate expiry,2025-04-17 21:02:32,2025-04-19 00:34:32,1652,1440,Yes,ANL-003,Incident on api-gateway. Root cause: Certificate expiry.
+INC-0206,inventory-service,P4,Resolved,Network packet loss,2026-04-23 22:55:22,2026-04-25 02:23:22,1648,4320,No,ANL-001,Incident on inventory-service. Root cause: Network packet loss.
+INC-0207,search-service,P1,Open,Third-party API timeout,2026-02-14 22:22:26,,,60,No,ANL-001,Incident on search-service. Root cause: Third-party API timeout.
+INC-0208,auth-service,P4,In Progress,Upstream dependency failure,2025-11-23 02:06:55,,,4320,No,ANL-004,Incident on auth-service. Root cause: Upstream dependency failure.
+INC-0209,payments-api,P1,In Progress,CPU spike from batch job,2025-01-13 18:22:37,,,60,No,ANL-005,Incident on payments-api. Root cause: CPU spike from batch job.
+INC-0210,auth-service,P2,Resolved,Third-party API timeout,2025-10-02 00:58:03,2025-10-02 06:57:03,359,240,Yes,ANL-005,Incident on auth-service. Root cause: Third-party API timeout.
+INC-0211,search-service,P3,In Progress,DDoS attack pattern,2025-02-22 13:38:02,,,1440,No,ANL-005,Incident on search-service. Root cause: DDoS attack pattern.
+INC-0212,reporting-engine,P3,Open,Network packet loss,2025-02-03 19:32:25,,,1440,No,ANL-003,Incident on reporting-engine. Root cause: Network packet loss.
+INC-0213,payments-api,P2,Resolved,DDoS attack pattern,2025-07-07 06:54:46,2025-07-07 14:25:46,451,240,Yes,ANL-005,Incident on payments-api. Root cause: DDoS attack pattern.
+INC-0214,api-gateway,P3,Resolved,CPU spike from batch job,2025-09-20 22:58:41,2025-09-21 06:28:41,450,1440,No,ANL-004,Incident on api-gateway. Root cause: CPU spike from batch job.
+INC-0215,user-portal,P4,Resolved,Database connection exhaustion,2025-12-22 11:45:56,2025-12-23 18:11:56,1826,4320,No,ANL-003,Incident on user-portal. Root cause: Database connection exhaustion.
+INC-0216,api-gateway,P2,Open,Misconfiguration after deploy,2026-02-05 07:26:47,,,240,No,ANL-005,Incident on api-gateway. Root cause: Misconfiguration after deploy.
+INC-0217,auth-service,P3,Resolved,Misconfiguration after deploy,2025-10-05 06:28:51,2025-10-07 04:42:51,2774,1440,Yes,ANL-003,Incident on auth-service. Root cause: Misconfiguration after deploy.
+INC-0218,reporting-engine,P2,Resolved,Network packet loss,2025-10-28 07:34:51,2025-10-28 10:25:51,171,240,No,ANL-002,Incident on reporting-engine. Root cause: Network packet loss.
+INC-0219,database-cluster,P3,Resolved,Database connection exhaustion,2025-11-26 17:14:50,2025-11-27 16:57:50,1423,1440,No,ANL-004,Incident on database-cluster. Root cause: Database connection exhaustion.
+INC-0220,payments-api,P3,Resolved,Database connection exhaustion,2025-03-04 04:35:33,2025-03-04 20:36:33,961,1440,No,ANL-003,Incident on payments-api. Root cause: Database connection exhaustion.
+INC-0221,user-portal,P3,Open,Network packet loss,2025-10-01 01:18:38,,,1440,No,ANL-001,Incident on user-portal. Root cause: Network packet loss.
+INC-0222,database-cluster,P3,Open,Memory leak,2025-02-28 06:52:07,,,1440,No,ANL-003,Incident on database-cluster. Root cause: Memory leak.
+INC-0223,auth-service,P3,Open,Certificate expiry,2026-04-17 21:58:47,,,1440,No,ANL-001,Incident on auth-service. Root cause: Certificate expiry.
+INC-0224,auth-service,P2,In Progress,DDoS attack pattern,2025-10-25 08:55:23,,,240,No,ANL-001,Incident on auth-service. Root cause: DDoS attack pattern.
+INC-0225,api-gateway,P3,In Progress,Network packet loss,2025-03-01 17:14:53,,,1440,No,ANL-002,Incident on api-gateway. Root cause: Network packet loss.
+INC-0226,notification-service,P3,Resolved,Database connection exhaustion,2025-01-21 03:03:34,2025-01-21 18:33:34,930,1440,No,ANL-004,Incident on notification-service. Root cause: Database connection exhaustion.
+INC-0227,database-cluster,P3,Resolved,Misconfiguration after deploy,2025-12-13 15:08:01,2025-12-14 01:09:01,601,1440,No,ANL-005,Incident on database-cluster. Root cause: Misconfiguration after deploy.
+INC-0228,notification-service,P2,Resolved,Database connection exhaustion,2025-04-16 10:09:39,2025-04-16 13:14:39,185,240,No,ANL-004,Incident on notification-service. Root cause: Database connection exhaustion.
+INC-0229,api-gateway,P2,In Progress,DDoS attack pattern,2025-02-20 10:33:07,,,240,No,ANL-005,Incident on api-gateway. Root cause: DDoS attack pattern.
+INC-0230,user-portal,P2,Resolved,DDoS attack pattern,2026-01-31 03:53:40,2026-01-31 08:43:40,290,240,Yes,ANL-001,Incident on user-portal. Root cause: DDoS attack pattern.
+INC-0231,payments-api,P4,In Progress,Memory leak,2025-10-08 07:35:55,,,4320,No,ANL-005,Incident on payments-api. Root cause: Memory leak.
+INC-0232,email-relay,P3,Resolved,Database connection exhaustion,2025-02-21 01:38:00,2025-02-21 12:03:00,625,1440,No,ANL-004,Incident on email-relay. Root cause: Database connection exhaustion.
+INC-0233,reporting-engine,P4,Resolved,Disk space exhaustion,2026-03-23 12:55:20,2026-03-25 18:48:20,3233,4320,No,ANL-002,Incident on reporting-engine. Root cause: Disk space exhaustion.
+INC-0234,inventory-service,P4,Resolved,CPU spike from batch job,2025-09-25 14:13:15,2025-09-27 14:56:15,2923,4320,No,ANL-005,Incident on inventory-service. Root cause: CPU spike from batch job.
+INC-0235,reporting-engine,P3,Resolved,CPU spike from batch job,2025-02-13 00:58:13,2025-02-14 05:32:13,1714,1440,Yes,ANL-005,Incident on reporting-engine. Root cause: CPU spike from batch job.
+INC-0236,notification-service,P2,Resolved,DDoS attack pattern,2026-02-08 00:57:21,2026-02-08 06:29:21,332,240,Yes,ANL-001,Incident on notification-service. Root cause: DDoS attack pattern.
+INC-0237,database-cluster,P2,Resolved,Certificate expiry,2026-05-01 11:15:40,2026-05-01 14:36:40,201,240,No,ANL-005,Incident on database-cluster. Root cause: Certificate expiry.
+INC-0238,auth-service,P3,Resolved,Third-party API timeout,2025-04-30 18:23:22,2025-05-01 06:08:22,705,1440,No,ANL-005,Incident on auth-service. Root cause: Third-party API timeout.
+INC-0239,auth-service,P3,In Progress,Database connection exhaustion,2025-02-05 07:28:09,,,1440,No,ANL-003,Incident on auth-service. Root cause: Database connection exhaustion.
+INC-0240,email-relay,P3,In Progress,Memory leak,2026-01-22 20:06:08,,,1440,No,ANL-003,Incident on email-relay. Root cause: Memory leak.
+INC-0241,reporting-engine,P3,Resolved,Misconfiguration after deploy,2025-12-19 06:40:31,2025-12-19 21:01:31,861,1440,No,ANL-001,Incident on reporting-engine. Root cause: Misconfiguration after deploy.
+INC-0242,payments-api,P2,Resolved,DDoS attack pattern,2026-04-17 04:58:01,2026-04-17 07:56:01,178,240,No,ANL-003,Incident on payments-api. Root cause: DDoS attack pattern.
+INC-0243,reporting-engine,P4,In Progress,Certificate expiry,2025-10-15 19:22:11,,,4320,No,ANL-005,Incident on reporting-engine. Root cause: Certificate expiry.
+INC-0244,database-cluster,P2,Resolved,Network packet loss,2025-07-12 13:32:34,2025-07-12 18:13:34,281,240,Yes,ANL-001,Incident on database-cluster. Root cause: Network packet loss.
+INC-0245,auth-service,P1,Resolved,Upstream dependency failure,2025-05-05 01:01:02,2025-05-05 01:55:02,54,60,No,ANL-005,Incident on auth-service. Root cause: Upstream dependency failure.
+INC-0246,inventory-service,P3,Open,CPU spike from batch job,2025-12-29 14:03:52,,,1440,No,ANL-003,Incident on inventory-service. Root cause: CPU spike from batch job.
+INC-0247,search-service,P3,Resolved,Network packet loss,2025-07-06 23:30:25,2025-07-08 13:05:25,2255,1440,Yes,ANL-005,Incident on search-service. Root cause: Network packet loss.
+INC-0248,email-relay,P3,In Progress,Network packet loss,2025-08-10 22:44:09,,,1440,No,ANL-001,Incident on email-relay. Root cause: Network packet loss.
+INC-0249,api-gateway,P4,Resolved,Disk space exhaustion,2025-10-12 05:34:00,2025-10-13 17:37:00,2163,4320,No,ANL-004,Incident on api-gateway. Root cause: Disk space exhaustion.
+INC-0250,search-service,P1,Open,Misconfiguration after deploy,2025-02-27 02:43:52,,,60,No,ANL-005,Incident on search-service. Root cause: Misconfiguration after deploy.
+INC-0251,user-portal,P3,Resolved,Database connection exhaustion,2025-11-02 22:53:50,2025-11-03 08:56:50,603,1440,No,ANL-003,Incident on user-portal. Root cause: Database connection exhaustion.
+INC-0252,auth-service,P3,Open,Third-party API timeout,2026-01-31 10:43:53,,,1440,No,ANL-005,Incident on auth-service. Root cause: Third-party API timeout.
+INC-0253,payments-api,P1,Open,Network packet loss,2026-02-08 09:03:48,,,60,No,ANL-002,Incident on payments-api. Root cause: Network packet loss.
+INC-0254,email-relay,P3,Open,DDoS attack pattern,2025-05-07 05:15:27,,,1440,No,ANL-005,Incident on email-relay. Root cause: DDoS attack pattern.
+INC-0255,search-service,P3,Open,CPU spike from batch job,2026-02-18 11:32:01,,,1440,No,ANL-005,Incident on search-service. Root cause: CPU spike from batch job.
+INC-0256,api-gateway,P2,In Progress,Database connection exhaustion,2025-11-20 12:52:24,,,240,No,ANL-003,Incident on api-gateway. Root cause: Database connection exhaustion.
+INC-0257,auth-service,P4,Resolved,Third-party API timeout,2026-01-04 15:00:10,2026-01-07 07:58:10,3898,4320,No,ANL-005,Incident on auth-service. Root cause: Third-party API timeout.
+INC-0258,user-portal,P3,In Progress,CPU spike from batch job,2026-05-04 13:52:49,,,1440,No,ANL-004,Incident on user-portal. Root cause: CPU spike from batch job.
+INC-0259,auth-service,P2,Resolved,Database connection exhaustion,2025-05-29 04:28:39,2025-05-29 05:36:39,68,240,No,ANL-004,Incident on auth-service. Root cause: Database connection exhaustion.
+INC-0260,notification-service,P3,In Progress,Disk space exhaustion,2026-01-25 18:35:36,,,1440,No,ANL-004,Incident on notification-service. Root cause: Disk space exhaustion.
+INC-0261,user-portal,P4,In Progress,CPU spike from batch job,2025-06-11 01:07:46,,,4320,No,ANL-003,Incident on user-portal. Root cause: CPU spike from batch job.
+INC-0262,api-gateway,P4,In Progress,Certificate expiry,2025-12-24 00:44:57,,,4320,No,ANL-003,Incident on api-gateway. Root cause: Certificate expiry.
+INC-0263,email-relay,P3,Resolved,Network packet loss,2025-05-30 08:03:49,2025-05-30 23:04:49,901,1440,No,ANL-003,Incident on email-relay. Root cause: Network packet loss.
+INC-0264,payments-api,P3,Resolved,Upstream dependency failure,2026-01-15 19:40:41,2026-01-17 05:59:41,2059,1440,Yes,ANL-004,Incident on payments-api. Root cause: Upstream dependency failure.
+INC-0265,database-cluster,P3,In Progress,Database connection exhaustion,2026-03-22 10:22:56,,,1440,No,ANL-004,Incident on database-cluster. Root cause: Database connection exhaustion.
+INC-0266,auth-service,P4,Resolved,Misconfiguration after deploy,2025-02-02 16:10:34,2025-02-04 09:43:34,2493,4320,No,ANL-001,Incident on auth-service. Root cause: Misconfiguration after deploy.
+INC-0267,inventory-service,P3,In Progress,Upstream dependency failure,2025-06-06 22:49:14,,,1440,No,ANL-003,Incident on inventory-service. Root cause: Upstream dependency failure.
+INC-0268,payments-api,P4,Resolved,Third-party API timeout,2026-04-01 19:18:48,2026-04-02 22:40:48,1642,4320,No,ANL-002,Incident on payments-api. Root cause: Third-party API timeout.
+INC-0269,notification-service,P1,Open,Memory leak,2025-03-19 19:49:31,,,60,No,ANL-003,Incident on notification-service. Root cause: Memory leak.
+INC-0270,auth-service,P3,Open,CPU spike from batch job,2025-05-03 16:14:06,,,1440,No,ANL-004,Incident on auth-service. Root cause: CPU spike from batch job.
+INC-0271,api-gateway,P3,Resolved,Misconfiguration after deploy,2026-05-17 16:24:35,2026-05-19 02:22:35,2038,1440,Yes,ANL-001,Incident on api-gateway. Root cause: Misconfiguration after deploy.
+INC-0272,user-portal,P3,Resolved,Disk space exhaustion,2025-05-17 12:56:20,2025-05-18 14:22:20,1526,1440,Yes,ANL-004,Incident on user-portal. Root cause: Disk space exhaustion.
+INC-0273,auth-service,P4,In Progress,Memory leak,2025-08-20 18:26:02,,,4320,No,ANL-005,Incident on auth-service. Root cause: Memory leak.
+INC-0274,inventory-service,P2,Open,CPU spike from batch job,2026-02-12 06:00:21,,,240,No,ANL-002,Incident on inventory-service. Root cause: CPU spike from batch job.
+INC-0275,payments-api,P4,Open,DDoS attack pattern,2025-05-07 05:06:45,,,4320,No,ANL-003,Incident on payments-api. Root cause: DDoS attack pattern.
+INC-0276,database-cluster,P3,Resolved,Third-party API timeout,2025-05-31 00:47:14,2025-06-01 12:27:14,2140,1440,Yes,ANL-005,Incident on database-cluster. Root cause: Third-party API timeout.
+INC-0277,search-service,P4,Open,DDoS attack pattern,2025-03-09 08:54:33,,,4320,No,ANL-001,Incident on search-service. Root cause: DDoS attack pattern.
+INC-0278,notification-service,P2,Open,Memory leak,2025-07-22 13:23:23,,,240,No,ANL-002,Incident on notification-service. Root cause: Memory leak.
+INC-0279,database-cluster,P3,Resolved,Third-party API timeout,2026-03-21 23:12:28,2026-03-23 10:37:28,2125,1440,Yes,ANL-003,Incident on database-cluster. Root cause: Third-party API timeout.
+INC-0280,auth-service,P3,Resolved,Network packet loss,2025-08-27 07:17:05,2025-08-27 15:24:05,487,1440,No,ANL-004,Incident on auth-service. Root cause: Network packet loss.
+INC-0281,payments-api,P3,In Progress,Misconfiguration after deploy,2025-10-13 11:30:53,,,1440,No,ANL-002,Incident on payments-api. Root cause: Misconfiguration after deploy.
+INC-0282,inventory-service,P2,Open,Third-party API timeout,2025-10-18 04:52:18,,,240,No,ANL-005,Incident on inventory-service. Root cause: Third-party API timeout.
+INC-0283,notification-service,P4,Resolved,Upstream dependency failure,2026-04-08 18:47:11,2026-04-11 10:07:11,3800,4320,No,ANL-005,Incident on notification-service. Root cause: Upstream dependency failure.
+INC-0284,email-relay,P3,In Progress,Database connection exhaustion,2025-02-17 23:15:12,,,1440,No,ANL-005,Incident on email-relay. Root cause: Database connection exhaustion.
+INC-0285,api-gateway,P2,Resolved,CPU spike from batch job,2025-12-10 04:30:17,2025-12-10 06:12:17,102,240,No,ANL-002,Incident on api-gateway. Root cause: CPU spike from batch job.
+INC-0286,payments-api,P3,Resolved,Memory leak,2025-12-19 04:35:26,2025-12-20 04:00:26,1405,1440,No,ANL-005,Incident on payments-api. Root cause: Memory leak.
+INC-0287,auth-service,P3,Resolved,Memory leak,2025-11-04 13:01:08,2025-11-05 10:47:08,1306,1440,No,ANL-001,Incident on auth-service. Root cause: Memory leak.
+INC-0288,reporting-engine,P3,In Progress,DDoS attack pattern,2025-02-19 12:34:15,,,1440,No,ANL-001,Incident on reporting-engine. Root cause: DDoS attack pattern.
+INC-0289,auth-service,P4,Resolved,Misconfiguration after deploy,2025-11-14 13:49:55,2025-11-20 06:26:55,8197,4320,Yes,ANL-002,Incident on auth-service. Root cause: Misconfiguration after deploy.
+INC-0290,reporting-engine,P4,Open,DDoS attack pattern,2025-10-25 01:56:12,,,4320,No,ANL-004,Incident on reporting-engine. Root cause: DDoS attack pattern.
+INC-0291,api-gateway,P3,In Progress,Database connection exhaustion,2025-05-19 14:59:22,,,1440,No,ANL-004,Incident on api-gateway. Root cause: Database connection exhaustion.
+INC-0292,auth-service,P3,Open,Memory leak,2025-08-20 17:53:21,,,1440,No,ANL-005,Incident on auth-service. Root cause: Memory leak.
+INC-0293,notification-service,P3,Resolved,Network packet loss,2025-09-26 20:53:06,2025-09-27 10:43:06,830,1440,No,ANL-003,Incident on notification-service. Root cause: Network packet loss.
+INC-0294,auth-service,P2,Resolved,Disk space exhaustion,2026-04-23 14:59:57,2026-04-23 16:27:57,88,240,No,ANL-002,Incident on auth-service. Root cause: Disk space exhaustion.
+INC-0295,inventory-service,P2,Resolved,Third-party API timeout,2025-02-07 19:23:32,2025-02-07 23:41:32,258,240,Yes,ANL-001,Incident on inventory-service. Root cause: Third-party API timeout.
+INC-0296,auth-service,P3,Resolved,Certificate expiry,2026-01-27 09:17:57,2026-01-28 16:51:57,1894,1440,Yes,ANL-002,Incident on auth-service. Root cause: Certificate expiry.
+INC-0297,payments-api,P4,Resolved,Third-party API timeout,2025-09-07 01:37:51,2025-09-08 17:23:51,2386,4320,No,ANL-003,Incident on payments-api. Root cause: Third-party API timeout.
+INC-0298,notification-service,P4,Resolved,Disk space exhaustion,2025-08-22 09:44:37,2025-08-24 15:19:37,3215,4320,No,ANL-001,Incident on notification-service. Root cause: Disk space exhaustion.
+INC-0299,reporting-engine,P3,Resolved,CPU spike from batch job,2026-01-20 23:02:28,2026-01-21 11:00:28,718,1440,No,ANL-003,Incident on reporting-engine. Root cause: CPU spike from batch job.
+INC-0300,search-service,P4,Open,DDoS attack pattern,2025-11-20 08:51:13,,,4320,No,ANL-002,Incident on search-service. Root cause: DDoS attack pattern.
+INC-0301,auth-service,P2,Resolved,Upstream dependency failure,2025-06-25 00:43:36,2025-06-25 07:10:36,387,240,Yes,ANL-002,Incident on auth-service. Root cause: Upstream dependency failure.
+INC-0302,reporting-engine,P4,In Progress,Disk space exhaustion,2026-03-09 20:34:41,,,4320,No,ANL-002,Incident on reporting-engine. Root cause: Disk space exhaustion.
+INC-0303,payments-api,P3,Resolved,Network packet loss,2025-10-16 05:23:09,2025-10-17 16:49:09,2126,1440,Yes,ANL-005,Incident on payments-api. Root cause: Network packet loss.
+INC-0304,reporting-engine,P3,Resolved,Third-party API timeout,2026-04-14 07:16:53,2026-04-15 16:35:53,1999,1440,Yes,ANL-001,Incident on reporting-engine. Root cause: Third-party API timeout.
+INC-0305,search-service,P2,Resolved,Upstream dependency failure,2026-01-08 08:33:20,2026-01-08 12:24:20,231,240,No,ANL-003,Incident on search-service. Root cause: Upstream dependency failure.
+INC-0306,notification-service,P3,Resolved,Database connection exhaustion,2026-01-07 23:43:55,2026-01-08 12:56:55,793,1440,No,ANL-005,Incident on notification-service. Root cause: Database connection exhaustion.
+INC-0307,search-service,P3,Open,DDoS attack pattern,2025-08-08 20:36:21,,,1440,No,ANL-004,Incident on search-service. Root cause: DDoS attack pattern.
+INC-0308,payments-api,P3,Open,CPU spike from batch job,2026-01-22 05:55:14,,,1440,No,ANL-001,Incident on payments-api. Root cause: CPU spike from batch job.
+INC-0309,api-gateway,P4,Resolved,Upstream dependency failure,2025-10-15 22:26:26,2025-10-18 20:25:26,4199,4320,No,ANL-004,Incident on api-gateway. Root cause: Upstream dependency failure.
+INC-0310,auth-service,P1,In Progress,Misconfiguration after deploy,2026-03-06 18:28:30,,,60,No,ANL-005,Incident on auth-service. Root cause: Misconfiguration after deploy.
+INC-0311,api-gateway,P3,In Progress,Upstream dependency failure,2025-10-23 00:43:35,,,1440,No,ANL-002,Incident on api-gateway. Root cause: Upstream dependency failure.
+INC-0312,database-cluster,P3,Open,Network packet loss,2026-05-14 10:03:05,,,1440,No,ANL-004,Incident on database-cluster. Root cause: Network packet loss.
+INC-0313,user-portal,P2,Resolved,CPU spike from batch job,2026-01-15 06:52:33,2026-01-15 08:35:33,103,240,No,ANL-005,Incident on user-portal. Root cause: CPU spike from batch job.
+INC-0314,auth-service,P4,Resolved,Database connection exhaustion,2025-02-07 16:22:25,2025-02-09 22:08:25,3226,4320,No,ANL-004,Incident on auth-service. Root cause: Database connection exhaustion.
+INC-0315,auth-service,P2,In Progress,Memory leak,2025-06-19 21:13:48,,,240,No,ANL-004,Incident on auth-service. Root cause: Memory leak.
+INC-0316,inventory-service,P3,In Progress,Memory leak,2025-01-06 03:15:47,,,1440,No,ANL-005,Incident on inventory-service. Root cause: Memory leak.
+INC-0317,search-service,P3,In Progress,Misconfiguration after deploy,2025-01-14 07:33:40,,,1440,No,ANL-004,Incident on search-service. Root cause: Misconfiguration after deploy.
+INC-0318,payments-api,P4,Resolved,CPU spike from batch job,2025-04-26 15:39:01,2025-04-27 16:57:01,1518,4320,No,ANL-002,Incident on payments-api. Root cause: CPU spike from batch job.
+INC-0319,payments-api,P3,Resolved,Disk space exhaustion,2025-03-03 09:01:31,2025-03-04 21:16:31,2175,1440,Yes,ANL-004,Incident on payments-api. Root cause: Disk space exhaustion.
+INC-0320,notification-service,P3,Resolved,Misconfiguration after deploy,2025-03-04 14:48:29,2025-03-06 14:45:29,2877,1440,Yes,ANL-001,Incident on notification-service. Root cause: Misconfiguration after deploy.
+INC-0321,auth-service,P3,Resolved,Memory leak,2025-05-14 02:49:17,2025-05-15 01:03:17,1334,1440,No,ANL-004,Incident on auth-service. Root cause: Memory leak.
+INC-0322,auth-service,P4,Resolved,Database connection exhaustion,2026-02-15 05:36:02,2026-02-16 22:12:02,2436,4320,No,ANL-002,Incident on auth-service. Root cause: Database connection exhaustion.
+INC-0323,inventory-service,P2,Resolved,Misconfiguration after deploy,2025-02-06 03:58:40,2025-02-06 07:23:40,205,240,No,ANL-003,Incident on inventory-service. Root cause: Misconfiguration after deploy.
+INC-0324,user-portal,P4,Resolved,DDoS attack pattern,2025-01-13 03:53:16,2025-01-14 00:07:16,1214,4320,No,ANL-005,Incident on user-portal. Root cause: DDoS attack pattern.
+INC-0325,payments-api,P2,In Progress,Misconfiguration after deploy,2025-05-07 04:17:31,,,240,No,ANL-002,Incident on payments-api. Root cause: Misconfiguration after deploy.
+INC-0326,reporting-engine,P3,In Progress,Certificate expiry,2025-03-02 21:59:53,,,1440,No,ANL-003,Incident on reporting-engine. Root cause: Certificate expiry.
+INC-0327,api-gateway,P1,In Progress,Third-party API timeout,2026-04-22 19:16:38,,,60,No,ANL-004,Incident on api-gateway. Root cause: Third-party API timeout.
+INC-0328,database-cluster,P4,Resolved,Network packet loss,2026-01-17 01:30:40,2026-01-19 14:47:40,3677,4320,No,ANL-003,Incident on database-cluster. Root cause: Network packet loss.
+INC-0329,auth-service,P3,In Progress,Disk space exhaustion,2025-03-08 13:27:14,,,1440,No,ANL-003,Incident on auth-service. Root cause: Disk space exhaustion.
+INC-0330,payments-api,P4,Resolved,Certificate expiry,2025-10-23 03:42:47,2025-10-24 03:18:47,1416,4320,No,ANL-004,Incident on payments-api. Root cause: Certificate expiry.
+INC-0331,database-cluster,P3,Resolved,Network packet loss,2025-10-07 13:20:54,2025-10-08 13:40:54,1460,1440,Yes,ANL-001,Incident on database-cluster. Root cause: Network packet loss.
+INC-0332,search-service,P2,Open,CPU spike from batch job,2026-02-03 00:35:23,,,240,No,ANL-001,Incident on search-service. Root cause: CPU spike from batch job.
+INC-0333,email-relay,P1,Open,Third-party API timeout,2025-09-09 23:49:10,,,60,No,ANL-001,Incident on email-relay. Root cause: Third-party API timeout.
+INC-0334,search-service,P2,In Progress,Upstream dependency failure,2026-03-21 06:06:54,,,240,No,ANL-002,Incident on search-service. Root cause: Upstream dependency failure.
+INC-0335,database-cluster,P3,Resolved,Misconfiguration after deploy,2026-01-19 00:29:47,2026-01-20 09:49:47,2000,1440,Yes,ANL-001,Incident on database-cluster. Root cause: Misconfiguration after deploy.
+INC-0336,auth-service,P2,Resolved,Database connection exhaustion,2025-10-08 11:51:22,2025-10-08 17:17:22,326,240,Yes,ANL-002,Incident on auth-service. Root cause: Database connection exhaustion.
+INC-0337,inventory-service,P3,Resolved,Database connection exhaustion,2025-04-16 05:42:28,2025-04-16 18:22:28,760,1440,No,ANL-001,Incident on inventory-service. Root cause: Database connection exhaustion.
+INC-0338,reporting-engine,P4,Resolved,DDoS attack pattern,2025-12-08 22:21:00,2025-12-11 10:41:00,3620,4320,No,ANL-004,Incident on reporting-engine. Root cause: DDoS attack pattern.
+INC-0339,user-portal,P4,In Progress,Misconfiguration after deploy,2025-09-07 01:37:54,,,4320,No,ANL-002,Incident on user-portal. Root cause: Misconfiguration after deploy.
+INC-0340,api-gateway,P3,Open,Misconfiguration after deploy,2026-05-07 14:09:25,,,1440,No,ANL-005,Incident on api-gateway. Root cause: Misconfiguration after deploy.
+INC-0341,payments-api,P4,In Progress,DDoS attack pattern,2025-03-30 11:01:22,,,4320,No,ANL-002,Incident on payments-api. Root cause: DDoS attack pattern.
+INC-0342,inventory-service,P3,Resolved,Upstream dependency failure,2025-12-07 13:23:33,2025-12-07 20:18:33,415,1440,No,ANL-001,Incident on inventory-service. Root cause: Upstream dependency failure.
+INC-0343,auth-service,P4,Resolved,Certificate expiry,2026-05-07 22:14:22,2026-05-09 20:09:22,2755,4320,No,ANL-002,Incident on auth-service. Root cause: Certificate expiry.
+INC-0344,reporting-engine,P2,In Progress,Database connection exhaustion,2025-12-15 19:12:37,,,240,No,ANL-004,Incident on reporting-engine. Root cause: Database connection exhaustion.
+INC-0345,search-service,P3,In Progress,Memory leak,2025-10-07 06:06:55,,,1440,No,ANL-005,Incident on search-service. Root cause: Memory leak.
+INC-0346,api-gateway,P3,In Progress,Certificate expiry,2026-05-18 12:57:04,,,1440,No,ANL-001,Incident on api-gateway. Root cause: Certificate expiry.
+INC-0347,api-gateway,P3,Resolved,Disk space exhaustion,2025-03-24 06:56:58,2025-03-25 02:34:58,1178,1440,No,ANL-001,Incident on api-gateway. Root cause: Disk space exhaustion.
+INC-0348,search-service,P2,Resolved,Third-party API timeout,2026-03-23 19:09:54,2026-03-23 22:21:54,192,240,No,ANL-004,Incident on search-service. Root cause: Third-party API timeout.
+INC-0349,user-portal,P3,Open,DDoS attack pattern,2025-01-20 01:52:51,,,1440,No,ANL-001,Incident on user-portal. Root cause: DDoS attack pattern.
+INC-0350,auth-service,P2,Resolved,Certificate expiry,2025-09-28 13:19:00,2025-09-28 14:40:00,81,240,No,ANL-003,Incident on auth-service. Root cause: Certificate expiry.
+INC-0351,api-gateway,P3,Open,Network packet loss,2025-03-17 19:49:30,,,1440,No,ANL-004,Incident on api-gateway. Root cause: Network packet loss.
+INC-0352,payments-api,P3,Resolved,DDoS attack pattern,2026-05-19 07:02:05,2026-05-19 16:57:05,595,1440,No,ANL-002,Incident on payments-api. Root cause: DDoS attack pattern.
+INC-0353,user-portal,P4,Resolved,CPU spike from batch job,2025-05-05 09:08:45,2025-05-07 14:21:45,3193,4320,No,ANL-005,Incident on user-portal. Root cause: CPU spike from batch job.
+INC-0354,user-portal,P3,Open,Certificate expiry,2026-05-13 11:23:29,,,1440,No,ANL-004,Incident on user-portal. Root cause: Certificate expiry.
+INC-0355,inventory-service,P1,Open,Third-party API timeout,2025-11-30 15:26:43,,,60,No,ANL-001,Incident on inventory-service. Root cause: Third-party API timeout.
+INC-0356,email-relay,P3,Resolved,Database connection exhaustion,2026-02-22 00:20:11,2026-02-23 02:38:11,1578,1440,Yes,ANL-003,Incident on email-relay. Root cause: Database connection exhaustion.
+INC-0357,auth-service,P3,Resolved,CPU spike from batch job,2026-05-12 09:50:51,2026-05-13 00:47:51,897,1440,No,ANL-005,Incident on auth-service. Root cause: CPU spike from batch job.
+INC-0358,api-gateway,P3,In Progress,DDoS attack pattern,2025-12-22 15:08:23,,,1440,No,ANL-002,Incident on api-gateway. Root cause: DDoS attack pattern.
+INC-0359,email-relay,P4,Resolved,Third-party API timeout,2025-03-07 19:53:28,2025-03-09 10:11:28,2298,4320,No,ANL-003,Incident on email-relay. Root cause: Third-party API timeout.
+INC-0360,api-gateway,P2,Open,Certificate expiry,2026-02-01 18:27:56,,,240,No,ANL-004,Incident on api-gateway. Root cause: Certificate expiry.
+INC-0361,user-portal,P3,In Progress,Network packet loss,2026-05-09 14:36:33,,,1440,No,ANL-002,Incident on user-portal. Root cause: Network packet loss.
+INC-0362,user-portal,P3,In Progress,DDoS attack pattern,2025-12-17 07:16:02,,,1440,No,ANL-001,Incident on user-portal. Root cause: DDoS attack pattern.
+INC-0363,payments-api,P4,In Progress,Upstream dependency failure,2025-10-26 05:14:17,,,4320,No,ANL-005,Incident on payments-api. Root cause: Upstream dependency failure.
+INC-0364,auth-service,P3,Resolved,Network packet loss,2026-01-15 14:01:09,2026-01-16 12:48:09,1367,1440,No,ANL-001,Incident on auth-service. Root cause: Network packet loss.
+INC-0365,database-cluster,P3,Resolved,Memory leak,2025-08-02 11:37:47,2025-08-03 01:08:47,811,1440,No,ANL-005,Incident on database-cluster. Root cause: Memory leak.
+INC-0366,inventory-service,P2,Resolved,CPU spike from batch job,2026-02-01 18:06:49,2026-02-01 21:30:49,204,240,No,ANL-005,Incident on inventory-service. Root cause: CPU spike from batch job.
+INC-0367,search-service,P2,In Progress,Memory leak,2025-12-09 19:40:09,,,240,No,ANL-002,Incident on search-service. Root cause: Memory leak.
+INC-0368,database-cluster,P4,Resolved,Memory leak,2025-12-16 07:37:06,2025-12-20 17:34:06,6357,4320,Yes,ANL-003,Incident on database-cluster. Root cause: Memory leak.
+INC-0369,notification-service,P4,Resolved,Upstream dependency failure,2026-04-02 15:41:44,2026-04-06 07:52:44,5291,4320,Yes,ANL-005,Incident on notification-service. Root cause: Upstream dependency failure.
+INC-0370,notification-service,P3,In Progress,Upstream dependency failure,2025-02-16 02:30:36,,,1440,No,ANL-003,Incident on notification-service. Root cause: Upstream dependency failure.
+INC-0371,auth-service,P3,In Progress,Misconfiguration after deploy,2025-08-13 17:33:45,,,1440,No,ANL-003,Incident on auth-service. Root cause: Misconfiguration after deploy.
+INC-0372,payments-api,P4,Resolved,Certificate expiry,2025-11-16 16:42:34,2025-11-19 09:04:34,3862,4320,No,ANL-003,Incident on payments-api. Root cause: Certificate expiry.
+INC-0373,notification-service,P4,Resolved,Certificate expiry,2025-09-08 04:19:04,2025-09-11 22:36:04,5417,4320,Yes,ANL-004,Incident on notification-service. Root cause: Certificate expiry.
+INC-0374,payments-api,P3,Resolved,Disk space exhaustion,2025-12-18 01:44:11,2025-12-18 16:54:11,910,1440,No,ANL-001,Incident on payments-api. Root cause: Disk space exhaustion.
+INC-0375,inventory-service,P3,In Progress,Network packet loss,2025-09-12 05:06:51,,,1440,No,ANL-001,Incident on inventory-service. Root cause: Network packet loss.
+INC-0376,inventory-service,P4,In Progress,DDoS attack pattern,2025-02-19 04:34:10,,,4320,No,ANL-004,Incident on inventory-service. Root cause: DDoS attack pattern.
+INC-0377,inventory-service,P2,Resolved,Misconfiguration after deploy,2025-09-08 18:38:33,2025-09-08 20:32:33,114,240,No,ANL-003,Incident on inventory-service. Root cause: Misconfiguration after deploy.
+INC-0378,auth-service,P3,Resolved,Memory leak,2025-02-05 16:26:17,2025-02-07 09:09:17,2443,1440,Yes,ANL-004,Incident on auth-service. Root cause: Memory leak.
+INC-0379,inventory-service,P1,Open,Network packet loss,2025-01-01 12:36:00,,,60,No,ANL-002,Incident on inventory-service. Root cause: Network packet loss.
+INC-0380,database-cluster,P4,Resolved,Certificate expiry,2025-08-01 20:05:34,2025-08-04 10:27:34,3742,4320,No,ANL-003,Incident on database-cluster. Root cause: Certificate expiry.
+INC-0381,user-portal,P2,Resolved,Memory leak,2025-11-04 20:20:32,2025-11-05 00:06:32,226,240,No,ANL-002,Incident on user-portal. Root cause: Memory leak.
+INC-0382,auth-service,P3,Resolved,Upstream dependency failure,2026-01-06 08:19:16,2026-01-07 11:43:16,1644,1440,Yes,ANL-002,Incident on auth-service. Root cause: Upstream dependency failure.
+INC-0383,auth-service,P3,Resolved,Memory leak,2025-09-24 20:41:10,2025-09-25 17:52:10,1271,1440,No,ANL-004,Incident on auth-service. Root cause: Memory leak.
+INC-0384,reporting-engine,P3,Resolved,Database connection exhaustion,2025-03-21 13:22:51,2025-03-22 03:10:51,828,1440,No,ANL-003,Incident on reporting-engine. Root cause: Database connection exhaustion.
+INC-0385,payments-api,P3,In Progress,Certificate expiry,2025-02-23 03:17:05,,,1440,No,ANL-005,Incident on payments-api. Root cause: Certificate expiry.
+INC-0386,api-gateway,P1,Resolved,Upstream dependency failure,2026-05-03 20:15:37,2026-05-03 20:58:37,43,60,No,ANL-004,Incident on api-gateway. Root cause: Upstream dependency failure.
+INC-0387,payments-api,P3,Resolved,Database connection exhaustion,2025-04-19 18:02:02,2025-04-20 07:26:02,804,1440,No,ANL-005,Incident on payments-api. Root cause: Database connection exhaustion.
+INC-0388,api-gateway,P3,Resolved,Certificate expiry,2025-07-12 11:04:22,2025-07-13 07:43:22,1239,1440,No,ANL-001,Incident on api-gateway. Root cause: Certificate expiry.
+INC-0389,database-cluster,P2,Resolved,Memory leak,2026-05-27 09:33:56,2026-05-27 13:08:56,215,240,No,ANL-002,Incident on database-cluster. Root cause: Memory leak.
+INC-0390,database-cluster,P3,Open,Memory leak,2025-07-05 21:38:27,,,1440,No,ANL-004,Incident on database-cluster. Root cause: Memory leak.
+INC-0391,payments-api,P2,Resolved,CPU spike from batch job,2025-01-10 08:56:43,2025-01-10 12:28:43,212,240,No,ANL-003,Incident on payments-api. Root cause: CPU spike from batch job.
+INC-0392,auth-service,P2,Resolved,DDoS attack pattern,2026-03-01 08:49:05,2026-03-01 12:14:05,205,240,No,ANL-004,Incident on auth-service. Root cause: DDoS attack pattern.
+INC-0393,email-relay,P4,Resolved,Database connection exhaustion,2025-01-11 17:07:41,2025-01-12 12:15:41,1148,4320,No,ANL-002,Incident on email-relay. Root cause: Database connection exhaustion.
+INC-0394,reporting-engine,P1,In Progress,CPU spike from batch job,2025-08-11 12:31:10,,,60,No,ANL-004,Incident on reporting-engine. Root cause: CPU spike from batch job.
+INC-0395,database-cluster,P3,Resolved,Database connection exhaustion,2025-08-29 17:04:59,2025-08-30 04:16:59,672,1440,No,ANL-005,Incident on database-cluster. Root cause: Database connection exhaustion.
+INC-0396,payments-api,P4,In Progress,DDoS attack pattern,2025-10-31 11:45:47,,,4320,No,ANL-001,Incident on payments-api. Root cause: DDoS attack pattern.
+INC-0397,auth-service,P3,Open,Upstream dependency failure,2025-03-08 23:07:22,,,1440,No,ANL-001,Incident on auth-service. Root cause: Upstream dependency failure.
+INC-0398,user-portal,P3,Resolved,Database connection exhaustion,2025-01-10 20:05:31,2025-01-11 12:38:31,993,1440,No,ANL-001,Incident on user-portal. Root cause: Database connection exhaustion.
+INC-0399,auth-service,P2,Resolved,Misconfiguration after deploy,2025-05-10 16:24:54,2025-05-10 19:37:54,193,240,No,ANL-002,Incident on auth-service. Root cause: Misconfiguration after deploy.
+INC-0400,auth-service,P3,Resolved,DDoS attack pattern,2025-11-30 11:11:24,2025-11-30 21:12:24,601,1440,No,ANL-005,Incident on auth-service. Root cause: DDoS attack pattern.
+INC-0401,payments-api,P1,In Progress,Network packet loss,2025-12-20 13:30:05,,,60,No,ANL-003,Incident on payments-api. Root cause: Network packet loss.
+INC-0402,api-gateway,P1,Resolved,Certificate expiry,2025-07-18 03:42:30,2025-07-18 04:07:30,25,60,No,ANL-005,Incident on api-gateway. Root cause: Certificate expiry.
+INC-0403,auth-service,P3,Resolved,Memory leak,2025-01-10 13:03:58,2025-01-12 06:35:58,2492,1440,Yes,ANL-001,Incident on auth-service. Root cause: Memory leak.
+INC-0404,user-portal,P3,Open,Memory leak,2026-03-06 10:08:47,,,1440,No,ANL-002,Incident on user-portal. Root cause: Memory leak.
+INC-0405,database-cluster,P3,Resolved,Database connection exhaustion,2026-03-20 22:12:09,2026-03-21 15:07:09,1015,1440,No,ANL-001,Incident on database-cluster. Root cause: Database connection exhaustion.
+INC-0406,auth-service,P3,Open,CPU spike from batch job,2025-02-05 16:10:15,,,1440,No,ANL-001,Incident on auth-service. Root cause: CPU spike from batch job.
+INC-0407,payments-api,P4,In Progress,DDoS attack pattern,2025-03-09 02:20:34,,,4320,No,ANL-004,Incident on payments-api. Root cause: DDoS attack pattern.
+INC-0408,database-cluster,P1,Open,Third-party API timeout,2025-07-08 10:05:36,,,60,No,ANL-003,Incident on database-cluster. Root cause: Third-party API timeout.
+INC-0409,search-service,P3,Resolved,Upstream dependency failure,2025-04-27 22:45:38,2025-04-28 11:25:38,760,1440,No,ANL-004,Incident on search-service. Root cause: Upstream dependency failure.
+INC-0410,auth-service,P1,Open,DDoS attack pattern,2025-01-02 03:15:15,,,60,No,ANL-003,Incident on auth-service. Root cause: DDoS attack pattern.
+INC-0411,reporting-engine,P2,Resolved,Network packet loss,2025-02-16 12:31:30,2025-02-16 14:31:30,120,240,No,ANL-003,Incident on reporting-engine. Root cause: Network packet loss.
+INC-0412,reporting-engine,P2,Resolved,DDoS attack pattern,2025-12-23 02:16:37,2025-12-23 05:29:37,193,240,No,ANL-005,Incident on reporting-engine. Root cause: DDoS attack pattern.
+INC-0413,auth-service,P2,In Progress,Database connection exhaustion,2026-04-05 17:44:12,,,240,No,ANL-001,Incident on auth-service. Root cause: Database connection exhaustion.
+INC-0414,database-cluster,P3,Open,Misconfiguration after deploy,2025-09-02 16:11:30,,,1440,No,ANL-003,Incident on database-cluster. Root cause: Misconfiguration after deploy.
+INC-0415,notification-service,P3,Resolved,Certificate expiry,2026-03-31 03:44:52,2026-04-01 06:26:52,1602,1440,Yes,ANL-002,Incident on notification-service. Root cause: Certificate expiry.
+INC-0416,reporting-engine,P2,Resolved,Database connection exhaustion,2026-02-21 06:21:27,2026-02-21 08:41:27,140,240,No,ANL-002,Incident on reporting-engine. Root cause: Database connection exhaustion.
+INC-0417,payments-api,P3,In Progress,Certificate expiry,2025-08-25 06:58:41,,,1440,No,ANL-001,Incident on payments-api. Root cause: Certificate expiry.
+INC-0418,payments-api,P2,Open,Upstream dependency failure,2025-10-04 07:31:32,,,240,No,ANL-005,Incident on payments-api. Root cause: Upstream dependency failure.
+INC-0419,auth-service,P1,In Progress,Disk space exhaustion,2025-12-18 05:38:26,,,60,No,ANL-005,Incident on auth-service. Root cause: Disk space exhaustion.
+INC-0420,auth-service,P2,Resolved,Memory leak,2025-02-17 21:35:48,2025-02-17 23:10:48,95,240,No,ANL-002,Incident on auth-service. Root cause: Memory leak.
+INC-0421,payments-api,P2,Resolved,Third-party API timeout,2026-04-01 06:02:43,2026-04-01 09:57:43,235,240,No,ANL-001,Incident on payments-api. Root cause: Third-party API timeout.
+INC-0422,inventory-service,P1,Resolved,Certificate expiry,2025-03-13 10:36:21,2025-03-13 12:27:21,111,60,Yes,ANL-001,Incident on inventory-service. Root cause: Certificate expiry.
+INC-0423,email-relay,P1,Open,Disk space exhaustion,2025-11-03 19:18:33,,,60,No,ANL-001,Incident on email-relay. Root cause: Disk space exhaustion.
+INC-0424,notification-service,P3,Resolved,Certificate expiry,2025-08-02 14:01:54,2025-08-03 08:05:54,1084,1440,No,ANL-004,Incident on notification-service. Root cause: Certificate expiry.
+INC-0425,database-cluster,P4,In Progress,Network packet loss,2025-11-17 00:05:28,,,4320,No,ANL-004,Incident on database-cluster. Root cause: Network packet loss.
+INC-0426,reporting-engine,P1,In Progress,Upstream dependency failure,2026-05-15 03:54:40,,,60,No,ANL-002,Incident on reporting-engine. Root cause: Upstream dependency failure.
+INC-0427,auth-service,P3,In Progress,DDoS attack pattern,2026-01-08 13:57:57,,,1440,No,ANL-004,Incident on auth-service. Root cause: DDoS attack pattern.
+INC-0428,reporting-engine,P3,Resolved,Misconfiguration after deploy,2025-05-20 16:00:39,2025-05-21 08:58:39,1018,1440,No,ANL-003,Incident on reporting-engine. Root cause: Misconfiguration after deploy.
+INC-0429,payments-api,P3,Resolved,Network packet loss,2026-02-16 05:19:59,2026-02-17 15:04:59,2025,1440,Yes,ANL-005,Incident on payments-api. Root cause: Network packet loss.
+INC-0430,notification-service,P4,In Progress,Upstream dependency failure,2025-07-27 00:25:24,,,4320,No,ANL-001,Incident on notification-service. Root cause: Upstream dependency failure.
+INC-0431,reporting-engine,P4,Resolved,DDoS attack pattern,2025-05-15 22:13:37,2025-05-18 07:31:37,3438,4320,No,ANL-002,Incident on reporting-engine. Root cause: DDoS attack pattern.
+INC-0432,email-relay,P3,In Progress,Memory leak,2025-10-01 03:49:49,,,1440,No,ANL-005,Incident on email-relay. Root cause: Memory leak.
+INC-0433,search-service,P2,Open,Misconfiguration after deploy,2025-05-17 08:36:55,,,240,No,ANL-001,Incident on search-service. Root cause: Misconfiguration after deploy.
+INC-0434,auth-service,P2,Resolved,CPU spike from batch job,2026-01-07 06:21:38,2026-01-07 11:27:38,306,240,Yes,ANL-003,Incident on auth-service. Root cause: CPU spike from batch job.
+INC-0435,api-gateway,P4,Resolved,Certificate expiry,2025-09-09 08:07:57,2025-09-13 02:05:57,5398,4320,Yes,ANL-001,Incident on api-gateway. Root cause: Certificate expiry.
+INC-0436,payments-api,P2,Resolved,CPU spike from batch job,2025-10-11 10:02:23,2025-10-11 11:38:23,96,240,No,ANL-003,Incident on payments-api. Root cause: CPU spike from batch job.
+INC-0437,api-gateway,P3,Resolved,Misconfiguration after deploy,2025-09-08 13:45:34,2025-09-08 23:11:34,566,1440,No,ANL-002,Incident on api-gateway. Root cause: Misconfiguration after deploy.
+INC-0438,api-gateway,P3,In Progress,Certificate expiry,2026-03-13 12:00:58,,,1440,No,ANL-003,Incident on api-gateway. Root cause: Certificate expiry.
+INC-0439,reporting-engine,P2,Resolved,Misconfiguration after deploy,2025-08-17 18:11:59,2025-08-17 19:55:59,104,240,No,ANL-002,Incident on reporting-engine. Root cause: Misconfiguration after deploy.
+INC-0440,payments-api,P3,In Progress,Memory leak,2025-05-22 10:14:59,,,1440,No,ANL-003,Incident on payments-api. Root cause: Memory leak.
+INC-0441,auth-service,P4,Resolved,Database connection exhaustion,2026-01-21 09:33:35,2026-01-22 18:37:35,1984,4320,No,ANL-003,Incident on auth-service. Root cause: Database connection exhaustion.
+INC-0442,user-portal,P3,Resolved,Database connection exhaustion,2026-05-12 09:44:15,2026-05-13 20:48:15,2104,1440,Yes,ANL-004,Incident on user-portal. Root cause: Database connection exhaustion.
+INC-0443,payments-api,P1,Resolved,DDoS attack pattern,2025-07-19 08:27:02,2025-07-19 10:21:02,114,60,Yes,ANL-001,Incident on payments-api. Root cause: DDoS attack pattern.
+INC-0444,user-portal,P1,Open,Disk space exhaustion,2026-01-18 23:42:52,,,60,No,ANL-003,Incident on user-portal. Root cause: Disk space exhaustion.
+INC-0445,email-relay,P3,Open,Upstream dependency failure,2025-05-07 08:08:13,,,1440,No,ANL-001,Incident on email-relay. Root cause: Upstream dependency failure.
+INC-0446,api-gateway,P4,Resolved,Misconfiguration after deploy,2025-03-23 08:12:59,2025-03-26 11:06:59,4494,4320,Yes,ANL-003,Incident on api-gateway. Root cause: Misconfiguration after deploy.
+INC-0447,search-service,P2,In Progress,Database connection exhaustion,2025-09-20 11:51:19,,,240,No,ANL-005,Incident on search-service. Root cause: Database connection exhaustion.
+INC-0448,auth-service,P4,Resolved,Third-party API timeout,2025-12-04 06:04:54,2025-12-06 05:30:54,2846,4320,No,ANL-001,Incident on auth-service. Root cause: Third-party API timeout.
+INC-0449,reporting-engine,P2,Resolved,CPU spike from batch job,2026-02-24 12:40:04,2026-02-24 17:38:04,298,240,Yes,ANL-003,Incident on reporting-engine. Root cause: CPU spike from batch job.
+INC-0450,email-relay,P2,Resolved,CPU spike from batch job,2026-01-17 07:56:21,2026-01-17 13:46:21,350,240,Yes,ANL-001,Incident on email-relay. Root cause: CPU spike from batch job.
+INC-0451,payments-api,P3,Resolved,Network packet loss,2025-06-05 02:12:29,2025-06-05 18:15:29,963,1440,No,ANL-001,Incident on payments-api. Root cause: Network packet loss.
+INC-0452,inventory-service,P2,Open,Database connection exhaustion,2025-08-28 12:07:26,,,240,No,ANL-004,Incident on inventory-service. Root cause: Database connection exhaustion.
+INC-0453,search-service,P3,Resolved,Disk space exhaustion,2025-05-24 14:26:08,2025-05-24 23:32:08,546,1440,No,ANL-004,Incident on search-service. Root cause: Disk space exhaustion.
+INC-0454,inventory-service,P3,Resolved,Network packet loss,2025-07-24 14:08:49,2025-07-25 05:07:49,899,1440,No,ANL-003,Incident on inventory-service. Root cause: Network packet loss.
+INC-0455,auth-service,P3,In Progress,Database connection exhaustion,2025-09-25 00:44:09,,,1440,No,ANL-004,Incident on auth-service. Root cause: Database connection exhaustion.
+INC-0456,auth-service,P4,Open,Disk space exhaustion,2026-02-10 21:38:22,,,4320,No,ANL-005,Incident on auth-service. Root cause: Disk space exhaustion.
+INC-0457,inventory-service,P3,Open,Misconfiguration after deploy,2025-03-03 07:49:43,,,1440,No,ANL-001,Incident on inventory-service. Root cause: Misconfiguration after deploy.
+INC-0458,payments-api,P3,Resolved,Network packet loss,2025-05-15 06:41:51,2025-05-15 17:42:51,661,1440,No,ANL-002,Incident on payments-api. Root cause: Network packet loss.
+INC-0459,payments-api,P4,Resolved,Disk space exhaustion,2025-06-06 20:02:53,2025-06-12 06:00:53,7798,4320,Yes,ANL-005,Incident on payments-api. Root cause: Disk space exhaustion.
+INC-0460,payments-api,P2,Open,Disk space exhaustion,2026-03-09 03:22:49,,,240,No,ANL-005,Incident on payments-api. Root cause: Disk space exhaustion.
+INC-0461,auth-service,P3,In Progress,Third-party API timeout,2026-04-02 09:12:43,,,1440,No,ANL-004,Incident on auth-service. Root cause: Third-party API timeout.
+INC-0462,payments-api,P2,Resolved,Third-party API timeout,2025-03-19 19:56:16,2025-03-20 02:31:16,395,240,Yes,ANL-005,Incident on payments-api. Root cause: Third-party API timeout.
+INC-0463,api-gateway,P4,Open,Disk space exhaustion,2025-07-25 03:51:49,,,4320,No,ANL-004,Incident on api-gateway. Root cause: Disk space exhaustion.
+INC-0464,database-cluster,P3,In Progress,Disk space exhaustion,2025-04-22 17:36:29,,,1440,No,ANL-005,Incident on database-cluster. Root cause: Disk space exhaustion.
+INC-0465,api-gateway,P3,Open,Upstream dependency failure,2025-02-08 06:51:01,,,1440,No,ANL-003,Incident on api-gateway. Root cause: Upstream dependency failure.
+INC-0466,database-cluster,P4,Resolved,Misconfiguration after deploy,2026-01-17 20:26:46,2026-01-22 13:58:46,6812,4320,Yes,ANL-002,Incident on database-cluster. Root cause: Misconfiguration after deploy.
+INC-0467,api-gateway,P2,In Progress,Misconfiguration after deploy,2025-11-20 17:12:24,,,240,No,ANL-001,Incident on api-gateway. Root cause: Misconfiguration after deploy.
+INC-0468,reporting-engine,P2,Resolved,Network packet loss,2026-02-06 04:17:03,2026-02-06 11:57:03,460,240,Yes,ANL-001,Incident on reporting-engine. Root cause: Network packet loss.
+INC-0469,auth-service,P3,In Progress,Disk space exhaustion,2025-04-16 08:41:45,,,1440,No,ANL-005,Incident on auth-service. Root cause: Disk space exhaustion.
+INC-0470,auth-service,P1,Open,Upstream dependency failure,2025-01-26 16:29:20,,,60,No,ANL-001,Incident on auth-service. Root cause: Upstream dependency failure.
+INC-0471,api-gateway,P4,Open,Network packet loss,2026-01-28 08:14:17,,,4320,No,ANL-001,Incident on api-gateway. Root cause: Network packet loss.
+INC-0472,email-relay,P3,Open,Network packet loss,2025-05-18 22:23:59,,,1440,No,ANL-005,Incident on email-relay. Root cause: Network packet loss.
+INC-0473,payments-api,P3,Open,Misconfiguration after deploy,2025-01-22 07:42:51,,,1440,No,ANL-001,Incident on payments-api. Root cause: Misconfiguration after deploy.
+INC-0474,notification-service,P2,Resolved,Upstream dependency failure,2025-06-10 13:44:41,2025-06-10 15:38:41,114,240,No,ANL-004,Incident on notification-service. Root cause: Upstream dependency failure.
+INC-0475,inventory-service,P3,Resolved,Certificate expiry,2026-05-18 19:52:49,2026-05-19 02:10:49,378,1440,No,ANL-005,Incident on inventory-service. Root cause: Certificate expiry.
+INC-0476,auth-service,P4,Resolved,Disk space exhaustion,2025-10-20 10:00:39,2025-10-25 03:52:39,6832,4320,Yes,ANL-004,Incident on auth-service. Root cause: Disk space exhaustion.
+INC-0477,search-service,P2,In Progress,Third-party API timeout,2025-11-05 11:27:35,,,240,No,ANL-001,Incident on search-service. Root cause: Third-party API timeout.
+INC-0478,search-service,P1,Resolved,Third-party API timeout,2026-04-19 01:31:00,2026-04-19 02:09:00,38,60,No,ANL-003,Incident on search-service. Root cause: Third-party API timeout.
+INC-0479,database-cluster,P3,Resolved,DDoS attack pattern,2025-08-04 01:30:33,2025-08-04 18:58:33,1048,1440,No,ANL-003,Incident on database-cluster. Root cause: DDoS attack pattern.
+INC-0480,auth-service,P2,Resolved,Third-party API timeout,2025-11-10 20:56:26,2025-11-10 22:57:26,121,240,No,ANL-002,Incident on auth-service. Root cause: Third-party API timeout.
+INC-0481,database-cluster,P3,Open,Disk space exhaustion,2025-11-11 06:16:12,,,1440,No,ANL-001,Incident on database-cluster. Root cause: Disk space exhaustion.
+INC-0482,api-gateway,P3,Open,Upstream dependency failure,2026-02-20 06:19:14,,,1440,No,ANL-003,Incident on api-gateway. Root cause: Upstream dependency failure.
+INC-0483,auth-service,P3,Resolved,Database connection exhaustion,2026-01-01 15:59:29,2026-01-02 04:09:29,730,1440,No,ANL-003,Incident on auth-service. Root cause: Database connection exhaustion.
+INC-0484,payments-api,P3,Resolved,Database connection exhaustion,2025-06-22 15:06:20,2025-06-23 03:20:20,734,1440,No,ANL-002,Incident on payments-api. Root cause: Database connection exhaustion.
+INC-0485,api-gateway,P3,Resolved,Misconfiguration after deploy,2026-03-31 19:49:44,2026-04-01 13:07:44,1038,1440,No,ANL-004,Incident on api-gateway. Root cause: Misconfiguration after deploy.
+INC-0486,email-relay,P4,Resolved,Third-party API timeout,2026-04-28 01:50:31,2026-04-30 15:08:31,3678,4320,No,ANL-004,Incident on email-relay. Root cause: Third-party API timeout.
+INC-0487,reporting-engine,P4,Open,CPU spike from batch job,2025-08-20 17:45:15,,,4320,No,ANL-001,Incident on reporting-engine. Root cause: CPU spike from batch job.
+INC-0488,api-gateway,P4,Open,Disk space exhaustion,2026-03-19 06:27:07,,,4320,No,ANL-002,Incident on api-gateway. Root cause: Disk space exhaustion.
+INC-0489,inventory-service,P3,Resolved,DDoS attack pattern,2026-05-06 03:18:12,2026-05-06 12:03:12,525,1440,No,ANL-003,Incident on inventory-service. Root cause: DDoS attack pattern.
+INC-0490,auth-service,P3,Resolved,Certificate expiry,2026-03-24 14:37:03,2026-03-26 00:07:03,2010,1440,Yes,ANL-004,Incident on auth-service. Root cause: Certificate expiry.
+INC-0491,email-relay,P4,Open,Disk space exhaustion,2026-05-08 01:03:49,,,4320,No,ANL-004,Incident on email-relay. Root cause: Disk space exhaustion.
+INC-0492,auth-service,P3,Resolved,CPU spike from batch job,2025-06-04 21:21:03,2025-06-05 03:30:03,369,1440,No,ANL-001,Incident on auth-service. Root cause: CPU spike from batch job.
+INC-0493,notification-service,P4,Resolved,Memory leak,2025-01-04 04:52:25,2025-01-06 11:07:25,3255,4320,No,ANL-002,Incident on notification-service. Root cause: Memory leak.
+INC-0494,payments-api,P3,In Progress,Disk space exhaustion,2026-01-26 22:52:19,,,1440,No,ANL-003,Incident on payments-api. Root cause: Disk space exhaustion.
+INC-0495,payments-api,P2,In Progress,Network packet loss,2026-02-09 02:52:44,,,240,No,ANL-005,Incident on payments-api. Root cause: Network packet loss.
+INC-0496,api-gateway,P3,Resolved,Network packet loss,2025-10-07 00:55:18,2025-10-07 11:29:18,634,1440,No,ANL-002,Incident on api-gateway. Root cause: Network packet loss.
+INC-0497,auth-service,P4,Resolved,Upstream dependency failure,2025-06-24 05:39:11,2025-06-26 03:11:11,2732,4320,No,ANL-002,Incident on auth-service. Root cause: Upstream dependency failure.
+INC-0498,payments-api,P3,Resolved,DDoS attack pattern,2026-05-21 06:57:05,2026-05-21 18:43:05,706,1440,No,ANL-004,Incident on payments-api. Root cause: DDoS attack pattern.
+INC-0499,email-relay,P4,Resolved,Memory leak,2025-03-25 23:22:50,2025-03-29 06:10:50,4728,4320,Yes,ANL-001,Incident on email-relay. Root cause: Memory leak.
+INC-0500,payments-api,P3,Open,CPU spike from batch job,2025-07-16 07:22:59,,,1440,No,ANL-002,Incident on payments-api. Root cause: CPU spike from batch job.

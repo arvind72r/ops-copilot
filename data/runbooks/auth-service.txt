@@ -1,0 +1,34 @@
+AUTH-SERVICE RUNBOOK — NovaTech IT Operations
+==============================================
+Service: auth-service
+Owner: Identity Team
+Criticality: Critical
+
+COMMON FAILURE MODES
+---------------------
+1. Certificate Expiry
+   - Symptom: 401 errors spike, login failures > 5%
+   - Detection: Check cert expiry via: curl -vI https://auth.novatech.internal
+   - Resolution: Rotate certificate via PKI portal (requires approval)
+   - SLA: P1 — resolve within 60 minutes
+
+2. Memory Leak
+   - Symptom: Gradual latency increase, OOM kills in pods
+   - Detection: Check pod memory via monitoring dashboard
+   - Resolution: Rolling restart (requires ops-lead approval)
+   - Recurrence: Seen after version deployments — check changelog
+
+3. Database Connection Exhaustion
+   - Symptom: 503 errors from auth endpoints, connection pool logs show max_conn hit
+   - Detection: Query pg_stat_activity on auth-db
+   - Resolution: Identify long-running queries, kill stale connections
+   - Escalation: If not resolved in 20 min, page DB team
+
+ESCALATION PATH
+---------------
+L1 → L2 (15 min) → Ops Lead (30 min) → Identity Team On-Call (45 min)
+
+KNOWN RECURRING ISSUES
+-----------------------
+- Certificate renewal missed in Jan 2025 — resulted in 47-min P1
+- Memory leak introduced in v3.2.1 — patch in v3.2.3

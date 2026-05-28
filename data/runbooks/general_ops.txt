@@ -1,0 +1,31 @@
+GENERAL OPERATIONS RUNBOOK — NovaTech IT Operations
+====================================================
+
+SLA DEFINITIONS
+---------------
+P1 (Critical): Full service outage or data loss risk. MTTR target: 60 minutes.
+P2 (High): Major feature degraded. MTTR target: 4 hours.
+P3 (Medium): Minor feature affected. MTTR target: 24 hours.
+P4 (Low): Cosmetic or non-urgent. MTTR target: 72 hours.
+
+ESCALATION PRINCIPLES
+---------------------
+1. If MTTR is projected to exceed SLA, escalate immediately — do not wait.
+2. P1 incidents require Ops Lead notification within 10 minutes.
+3. When root cause is unknown after 20 minutes, escalate to engineering.
+
+SHIFT HANDOFF PROTOCOL
+-----------------------
+At end of each 12-hour shift, the outgoing analyst must:
+1. List all open incidents with current status
+2. Note any SLA-at-risk items
+3. Identify any recurring patterns observed
+4. Brief incoming analyst verbally + log summary in ops channel
+
+DATA MODIFICATION POLICY
+--------------------------
+NOC Analysts do NOT have write access to production systems.
+Any remediation action (restart, config change, rollback) requires:
+- Ops Lead approval for P2/P3
+- Ops Lead + Engineering approval for P1
+All actions are taken by the on-call engineer, not the NOC analyst.
