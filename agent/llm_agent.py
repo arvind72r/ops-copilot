@@ -172,44 +172,80 @@ def build_context(query: str, data: dict) -> str:
 
     # ── Incident count / trend ────────────────────────────────────────────────
     if any(w in q for w in ["how many", "count", "total", "trend", "spike",
-                             "increase", "decrease", "more", "less", "unusual"]):
-        # Time window detection
+                             "increase", "decrease", "more", "less", "unusual",
+                             "lately", "recently"]):
+        now = datetime.now()
+
+        # ── Time window detection (most specific first) ───────────────────────
         window_match = re.search(r"last (\d+) (day|week|month)", q)
         if window_match:
             n    = int(window_match.group(1))
             unit = window_match.group(2)
             days = n if unit == "day" else n * 7 if unit == "week" else n * 30
-            cutoff = datetime.now() - timedelta(days=days)
+            cutoff     = now - timedelta(days=days)
             period_df  = inc[inc["opened_at"] >= cutoff]
             period_lbl = f"last {n} {unit}(s)"
+        elif "this week" in q:
+            cutoff     = now - timedelta(days=now.weekday())
+            period_df  = inc[inc["opened_at"] >= cutoff.replace(hour=0,minute=0,second=0)]
+            period_lbl = "this week"
+        elif "this month" in q or "this month" in q:
+            # Filter by YEAR + MONTH to avoid mixing May-2025 with May-2026
+            period_df  = inc[(inc["opened_at"].dt.year  == now.year) &
+                             (inc["opened_at"].dt.month == now.month)]
+            period_lbl = now.strftime("%B %Y")
+        elif any(w in q for w in ["lately", "recently", "unusual", "spike",
+                                   "trend", "more incidents"]):
+            # "lately" / trend questions → last 30 days
+            cutoff     = now - timedelta(days=30)
+            period_df  = inc[inc["opened_at"] >= cutoff]
+            period_lbl = "last 30 days"
         else:
-            # Default: compare this month vs last month
-            now        = datetime.now()
-            this_month = inc[inc["opened_at"].dt.month == now.month]
-            last_month = inc[inc["opened_at"].dt.month == (now.month - 1 if now.month > 1 else 12)]
-            period_df  = this_month
-            period_lbl = "this month"
+            period_df  = inc
+            period_lbl = "all time"
+
+        # ── Service-specific filter if a service was named ────────────────────
+        svc_label = ""
+        if svc_match:
+            period_df = period_df[period_df["service"] == svc_match]
+            svc_label = f" for {svc_match}"
 
         by_sev = period_df.groupby("severity").size().reindex(["P1","P2","P3","P4"], fill_value=0)
         total  = by_sev.sum()
 
-        # Month-over-month for trend queries
-        trend_note = ""
-        if any(w in q for w in ["trend","spike","unusual","increase","decrease"]):
-            this_m = inc[inc["opened_at"].dt.month == datetime.now().month]
-            last_m = inc[inc["opened_at"].dt.month == (datetime.now().month - 1
-                         if datetime.now().month > 1 else 12)]
-            delta  = len(this_m) - len(last_m)
-            pct    = (delta / max(len(last_m), 1)) * 100
-            trend_note = (
-                f"\nMonth-over-month trend: {'+' if delta >= 0 else ''}{delta} incidents "
-                f"({pct:+.1f}%) — {'UP ⬆' if delta > 0 else 'DOWN ⬇' if delta < 0 else 'FLAT'}"
-            )
+        # ── Month-over-month trend (current month vs previous) ────────────────
+        if svc_match:
+            this_m = inc[(inc["service"] == svc_match) &
+                         (inc["opened_at"].dt.year  == now.year) &
+                         (inc["opened_at"].dt.month == now.month)]
+            prev_year  = now.year if now.month > 1 else now.year - 1
+            prev_month = now.month - 1 if now.month > 1 else 12
+            last_m = inc[(inc["service"] == svc_match) &
+                         (inc["opened_at"].dt.year  == prev_year) &
+                         (inc["opened_at"].dt.month == prev_month)]
+        else:
+            this_m = inc[(inc["opened_at"].dt.year  == now.year) &
+                         (inc["opened_at"].dt.month == now.month)]
+            prev_year  = now.year if now.month > 1 else now.year - 1
+            prev_month = now.month - 1 if now.month > 1 else 12
+            last_m = inc[(inc["opened_at"].dt.year  == prev_year) &
+                         (inc["opened_at"].dt.month == prev_month)]
+
+        delta = len(this_m) - len(last_m)
+        pct   = (delta / max(len(last_m), 1)) * 100
+        trend = "UP ⬆" if delta > 0 else "DOWN ⬇" if delta < 0 else "FLAT ➡"
+
+        open_df  = inc[inc["status"].isin(["Open", "In Progress"])]
+        if svc_match:
+            open_df = open_df[open_df["service"] == svc_match]
 
         return (
-            f"Incident count ({period_lbl}): {total}\n" +
+            f"Incident count{svc_label} ({period_lbl}): {total}\n" +
             "\n".join(f"  {s}: {c}" for s, c in by_sev.items()) +
-            trend_note
+            f"\nMonth-over-month ({now.strftime('%b %Y')} vs prev month): "
+            f"{'+' if delta >= 0 else ''}{delta} ({pct:+.1f}%) — {trend}"
+            f"\nCurrently open/in-progress{svc_label}: {len(open_df)}"
+            f" (P1 open: {len(open_df[open_df['severity']=='P1'])})"
         )
 
     # ── Default: general dashboard summary ───────────────────────────────────
