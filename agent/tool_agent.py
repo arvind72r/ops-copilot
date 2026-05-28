@@ -53,10 +53,14 @@ def init_agent_data(
     """
     Inject data dependencies into the global tool layer.
     Must be called once before build_agent() / run_query().
+
+    Expected CSV columns (from generate_data.py):
+        service, severity (P1-P4), status (Open/In Progress/Resolved),
+        opened_at, resolved_at, mttr_minutes, sla_breached (Yes/No)
     """
     global _incidents_df, _sla_targets, _collection
     _incidents_df = incidents.copy()
-    _incidents_df["created_at"] = pd.to_datetime(_incidents_df["created_at"])
+    _incidents_df["opened_at"] = pd.to_datetime(_incidents_df["opened_at"])
     _sla_targets = sla_targets
     _collection = collection
 
@@ -99,31 +103,33 @@ def query_incidents(service: str = "", priority: str = "", days: int = 30) -> st
         pri = priority.upper().strip()
         if pri not in KNOWN_PRIORITIES:
             return f"Invalid priority '{priority}'. Valid values: P1, P2, P3, P4."
-        df = df[df["priority"] == pri]
+        df = df[df["severity"] == pri]   # CSV column: severity
 
     days = min(max(int(days), 1), 365)
     cutoff = datetime.now() - timedelta(days=days)
-    df = df[df["created_at"] >= cutoff]
+    df = df[df["opened_at"] >= cutoff]   # CSV column: opened_at
 
     if df.empty:
         svc_part = f" for {service.lower().strip()}" if service else ""
         pri_part = f" with priority {priority.upper()}" if priority else ""
         return f"No incidents found{svc_part}{pri_part} in the last {days} days."
 
-    by_priority = df["priority"].value_counts().to_dict()
+    by_severity = df["severity"].value_counts().to_dict()   # CSV column: severity
     by_status   = df["status"].value_counts().to_dict()
-    resolved    = df[df["resolution_time_hours"] > 0]
-    avg_mttr    = resolved["resolution_time_hours"].mean() if not resolved.empty else None
+    # mttr_minutes > 0 means the incident was resolved with a recorded time
+    resolved    = df[df["mttr_minutes"].notna() & (df["mttr_minutes"] > 0)]
+    avg_mttr_h  = (resolved["mttr_minutes"].mean() / 60) if not resolved.empty else None
+    open_count  = int(df["status"].isin(["Open", "In Progress"]).sum())
 
     return json.dumps({
         "total_incidents":   len(df),
         "time_window_days":  days,
         "service_filter":    service.lower().strip() if service else "all",
         "priority_filter":   priority.upper() if priority else "all",
-        "by_priority":       by_priority,
+        "by_severity":       by_severity,
         "by_status":         by_status,
-        "avg_mttr_hours":    round(avg_mttr, 1) if avg_mttr is not None else "N/A",
-        "open_count":        int(by_status.get("open", 0)),
+        "avg_mttr_hours":    round(avg_mttr_h, 1) if avg_mttr_h is not None else "N/A",
+        "open_count":        open_count,
     }, indent=2)
 
 
@@ -162,16 +168,17 @@ def check_sla_breaches(service: str = "", priority: str = "") -> str:
         pri = priority.upper().strip()
         if pri not in KNOWN_PRIORITIES:
             return f"Invalid priority '{priority}'. Valid values: P1, P2, P3, P4."
-        df = df[df["priority"] == pri]
+        df = df[df["severity"] == pri]   # CSV column: severity
 
     if df.empty:
         return "No incidents found for the specified filters."
 
-    breached = df[df["sla_breached"] == True]
+    # sla_breached column contains "Yes" / "No" strings (not booleans)
+    breached = df[df["sla_breached"] == "Yes"]
 
     top_breach = (
         df.groupby("service")
-        .apply(lambda x: round(x["sla_breached"].sum() / len(x) * 100, 1))
+        .apply(lambda x: round(x["sla_breached"].eq("Yes").sum() / len(x) * 100, 1))
         .sort_values(ascending=False)
         .head(5)
         .to_dict()
@@ -217,13 +224,15 @@ def get_service_health(service: str) -> str:
 
     df      = _incidents_df[_incidents_df["service"] == svc].copy()
     cutoff  = datetime.now() - timedelta(days=30)
-    recent  = df[df["created_at"] >= cutoff]
+    recent  = df[df["opened_at"] >= cutoff]          # CSV column: opened_at
 
-    open_inc        = df[df["status"] == "open"]
-    critical_recent = recent[recent["priority"].isin(["P1", "P2"])]
-    breach_rate     = df["sla_breached"].mean() * 100
-    resolved        = df[df["resolution_time_hours"] > 0]
-    avg_mttr        = resolved["resolution_time_hours"].mean() if not resolved.empty else None
+    # Status values in CSV: "Open", "In Progress", "Resolved"
+    open_inc        = df[df["status"].isin(["Open", "In Progress"])]
+    critical_recent = recent[recent["severity"].isin(["P1", "P2"])]  # CSV column: severity
+    # sla_breached is "Yes"/"No" string in CSV
+    breach_rate     = df["sla_breached"].eq("Yes").mean() * 100
+    resolved        = df[df["mttr_minutes"].notna() & (df["mttr_minutes"] > 0)]
+    avg_mttr_h      = (resolved["mttr_minutes"].mean() / 60) if not resolved.empty else None
 
     if len(open_inc) == 0 and breach_rate < 20:
         health = "HEALTHY"
@@ -239,7 +248,7 @@ def get_service_health(service: str) -> str:
         "recent_p1_p2_30d":      len(critical_recent),
         "all_time_total":        len(df),
         "sla_breach_rate_pct":   round(breach_rate, 1),
-        "avg_mttr_hours":        round(avg_mttr, 1) if avg_mttr is not None else "N/A",
+        "avg_mttr_hours":        round(avg_mttr_h, 1) if avg_mttr_h is not None else "N/A",
     }, indent=2)
 
 
