@@ -73,13 +73,22 @@ def query_incidents(service: str = "", priority: str = "", days: int = 30) -> st
     Query incident records and return a summary matching the given filters.
     Use this tool for questions about incident counts, MTTR, open incidents,
     recent trends, or patterns by service or priority level.
+    Also use this tool when the user ASSERTS that a service has had incidents
+    (e.g. 'X has had P1 incidents lately') — always verify the claim with live
+    data before proceeding to other tools such as search_runbook.
+    Always call this tool to get incident data — do NOT assume what data exists
+    or answer from memory.
 
     Args:
         service: Service name to filter on (e.g. 'auth-service', 'payments-api').
                  Leave empty to query all services.
         priority: Priority level to filter on: 'P1', 'P2', 'P3', or 'P4'.
                   Leave empty to include all priorities.
+                  If the user provides an invalid priority (e.g. 'P5'), still
+                  call this tool — it will return a descriptive error message.
         days: How many past days to look at (default 30, max 365).
+              If the user asks about a time period that may have no data,
+              still call this tool — it will return a clear empty-result message.
 
     Returns JSON with: total count, breakdown by priority/status,
     average MTTR hours, and count of open incidents.
@@ -201,7 +210,13 @@ def get_service_health(service: str) -> str:
     """
     Return a health snapshot for a specific service.
     Use this tool for 'is X healthy?', 'what's the status of X service?',
-    service health checks, or per-service dashboard queries.
+    service health checks, per-service dashboard queries, AND analyst
+    prioritisation decisions — e.g. 'which service should I focus on?',
+    'which services need attention?', 'what should the incoming shift
+    analyst prioritise?', 'give me a shift handoff summary'.
+    This tool provides a pre-classified HEALTHY / DEGRADED / CRITICAL status
+    that is the most reliable signal for prioritisation; prefer it over
+    query_incidents when the question is about which services need attention.
 
     Args:
         service: Name of the service to assess (required).
@@ -310,9 +325,65 @@ def search_runbook(query: str) -> str:
     return "\n".join(lines)
 
 
+# ─── Tool 5: Fleet Summary ────────────────────────────────────────────────────
+
+@tool
+def get_fleet_summary() -> str:
+    """
+    Return a ranked summary of ALL services showing health status, open
+    incident count, SLA breach rate, and recent P1/P2 count — in one call.
+    Use this tool for queries that span multiple services at once:
+    'which services have high SLA breach rates AND open incidents?',
+    'give me a fleet-wide overview', 'which services are in trouble?',
+    'prioritise all services for the shift analyst',
+    '5-minute briefing on the whole fleet', 'shift handoff for all services'.
+    This avoids calling get_service_health or check_sla_breaches once per
+    service when a fleet-wide answer is needed.
+
+    Returns a JSON list of all services ranked by composite risk score
+    (high open incidents + high breach rate = highest risk).
+    READ-ONLY — does not modify any data.
+    """
+    if _incidents_df is None:
+        return "Error: data not initialised. Call init_agent_data() first."
+
+    cutoff = datetime.now() - timedelta(days=30)
+    rows   = []
+
+    for svc in KNOWN_SERVICES:
+        df      = _incidents_df[_incidents_df["service"] == svc]
+        recent  = df[df["opened_at"] >= cutoff]
+        open_inc = int(df["status"].isin(["Open", "In Progress"]).sum())
+        p1p2_30d = int(recent["severity"].isin(["P1", "P2"]).sum())
+        breach_rate = round(df["sla_breached"].eq("Yes").mean() * 100, 1) if len(df) > 0 else 0.0
+
+        # Composite risk score (higher = more attention needed)
+        risk_score = open_inc * 3 + p1p2_30d * 2 + (breach_rate / 10)
+
+        if open_inc == 0 and breach_rate < 20:
+            health = "HEALTHY"
+        elif open_inc <= 2 and breach_rate < 40:
+            health = "DEGRADED"
+        else:
+            health = "CRITICAL"
+
+        rows.append({
+            "service":          svc,
+            "health_status":    health,
+            "open_incidents":   open_inc,
+            "p1_p2_last_30d":  p1p2_30d,
+            "sla_breach_pct":  breach_rate,
+            "risk_score":      round(risk_score, 1),
+        })
+
+    rows.sort(key=lambda r: r["risk_score"], reverse=True)
+    return json.dumps({"fleet_summary": rows, "services_count": len(rows)}, indent=2)
+
+
 # ─── Registered tool list ─────────────────────────────────────────────────────
 
-TOOLS = [query_incidents, check_sla_breaches, get_service_health, search_runbook]
+TOOLS = [query_incidents, check_sla_breaches, get_service_health,
+         search_runbook, get_fleet_summary]
 
 
 # ─── System Prompt ────────────────────────────────────────────────────────────
@@ -323,14 +394,21 @@ You are OpsPilot — a read-only AI Decision Support Copilot for NovaTech IT Ope
 AVAILABLE TOOLS:
   • query_incidents      — incident counts, MTTR, trends by service/priority/time window
   • check_sla_breaches   — SLA compliance rates and breach analysis
-  • get_service_health   — health snapshot for a specific service
+  • get_service_health   — health snapshot for a specific service (also use for prioritisation)
   • search_runbook       — escalation steps, known issues, runbook procedures
+  • get_fleet_summary    — ranked overview of ALL services in one call (use for fleet-wide queries)
 
 TOOL USE RULES:
 - Choose the most specific tool for each question.
 - If a query spans multiple areas (e.g. health + runbook), call each tool once in sequence.
 - Pass only the required arguments; rely on defaults where sensible.
-- Do not call tools just to confirm data you already have.
+- ALWAYS call the relevant tool before answering any data question — even if you
+  believe the result will be empty, invalid, or outside the data range. Let the
+  tool confirm; never substitute your own knowledge for a live tool call.
+- If the user ASSERTS incident history as context (e.g. "X has had P1 incidents
+  lately"), verify it with query_incidents before proceeding to other tools.
+- For fleet-wide questions (all services, prioritise the fleet, shift briefing),
+  call get_fleet_summary once instead of calling get_service_health per service.
 
 SAFETY RULES:
 - You are READ-ONLY. Never suggest, simulate, or perform any system-modifying action.
