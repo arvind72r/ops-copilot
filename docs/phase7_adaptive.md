@@ -177,7 +177,7 @@ Adaptation changes **style only**. The following are always enforced regardless 
 | File | Purpose |
 |------|---------|
 | `agent/adaptive_agent.py` | `AdaptiveConfig`, `FeedbackStore`, `build_adaptive_agent()`, `run_adaptive()` |
-| `notebooks/Phase7_Adaptive.ipynb` | 13-cell Vocareum notebook: before/after comparison, feedback loop, implicit signals, feedback log |
+| `work/Phase7_Adaptive.ipynb` | 13-cell Vocareum notebook: before/after comparison, feedback loop, implicit signals, feedback log |
 
 ---
 

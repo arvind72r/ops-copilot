@@ -150,7 +150,7 @@ Evaluated 8 queries across three source types:
 | File | Purpose |
 |------|---------|
 | `agent/rag_agent.py` | Full RAG pipeline: chunking, ChromaDB build, retrieval, two-source LLM prompt |
-| `notebooks/Phase4_RAG.ipynb` | 12-cell Vocareum notebook demonstrating RAG end-to-end |
+| `work/Phase4_RAG.ipynb` | 12-cell Vocareum notebook demonstrating RAG end-to-end |
 | `data/vectorstore/` | ChromaDB persistent store (git-ignored; rebuilt at runtime) |
 
 ---

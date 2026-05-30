@@ -168,7 +168,7 @@ Restored via `SessionMemory.load()`, resumed with:
 | File | Purpose |
 |------|---------|
 | `agent/memory_agent.py` | `SessionMemory`, `build_memory_agent()`, `run_with_memory()`, reset utilities |
-| `notebooks/Phase6_Memory.ipynb` | 12-cell Vocareum notebook: pronoun resolution, save/load, reset demos, multi-step planning |
+| `work/Phase6_Memory.ipynb` | 12-cell Vocareum notebook: pronoun resolution, save/load, reset demos, multi-step planning |
 
 ---
 

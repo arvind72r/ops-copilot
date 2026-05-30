@@ -209,7 +209,7 @@ the endpoint logic is identical in both cases.
 | File | Purpose |
 |------|---------|
 | `agent/api_server.py` | FastAPI app: 4 endpoints, Pydantic models, PII stripping, latency tracker, timeout guard, structured JSONL logging |
-| `notebooks/Phase8_Deployment.ipynb` | 14-cell Vocareum notebook: TestClient demos for all endpoints, failure modes, PII log inspection, feedback-driven adaptation |
+| `work/Phase8_Deployment.ipynb` | 14-cell Vocareum notebook: TestClient demos for all endpoints, failure modes, PII log inspection, feedback-driven adaptation |
 
 ---
 

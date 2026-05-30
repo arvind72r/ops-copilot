@@ -195,7 +195,7 @@ None of these queries triggered a tool call. The safety rules in the system prom
 | File | Purpose |
 |------|---------|
 | `agent/tool_agent.py` | 4 LangChain tools, agent factory, query runner |
-| `notebooks/Phase5_Tools.ipynb` | 13-cell Vocareum notebook demonstrating routing, chaining, safety, and failure recovery |
+| `work/Phase5_Tools.ipynb` | 13-cell Vocareum notebook demonstrating routing, chaining, safety, and failure recovery |
 
 ---
 

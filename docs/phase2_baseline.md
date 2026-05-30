@@ -129,7 +129,7 @@ The baseline agent compares actual vs target and flags when the target is exceed
 | `data/runbooks/auth-service.txt` | Runbook text for Phase 4 ChromaDB ingestion |
 | `data/runbooks/payments-api.txt` | Runbook text for Phase 4 ChromaDB ingestion |
 | `data/runbooks/general_ops.txt` | General ops runbook for Phase 4 ChromaDB ingestion |
-| `notebooks/Phase2_Baseline_Agent.ipynb` | Vocareum notebook demonstrating baseline queries |
+| `work/Phase2_Baseline_Agent.ipynb` | Vocareum notebook demonstrating baseline queries |
 
 ---
 
