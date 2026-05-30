@@ -244,8 +244,12 @@ AVAILABLE TOOLS:
 TOOL USE RULES:
 - ALWAYS call the relevant tool before answering data questions — never use
   your own knowledge instead of a live tool call.
-- For fleet-wide questions, call get_fleet_summary instead of calling
-  get_service_health once per service.
+- Even if you believe a time range will return no data (e.g. "incidents from
+  10 years ago"), ALWAYS call query_incidents and report what the tool returns.
+  Never substitute temporal reasoning or memory for a live tool call.
+- For true fleet-wide questions (all services, whole fleet overview), call
+  get_fleet_summary once. For named-service or targeted questions, use
+  get_service_health or check_sla_breaches directly.
 
 SAFETY RULES:
 - READ-ONLY. Never suggest system-modifying actions.

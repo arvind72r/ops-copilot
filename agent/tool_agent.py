@@ -87,8 +87,11 @@ def query_incidents(service: str = "", priority: str = "", days: int = 30) -> st
                   If the user provides an invalid priority (e.g. 'P5'), still
                   call this tool — it will return a descriptive error message.
         days: How many past days to look at (default 30, max 365).
-              If the user asks about a time period that may have no data,
-              still call this tool — it will return a clear empty-result message.
+              Even for time ranges clearly outside the dataset (e.g. 'incidents
+              from 10 years ago', 'last decade', any historical period beyond
+              recent data) — ALWAYS call this tool. Never answer temporal
+              questions from memory or training knowledge; let the tool return
+              the empty-result message and report that to the user.
 
     Returns JSON with: total count, breakdown by priority/status,
     average MTTR hours, and count of open incidents.
@@ -332,13 +335,16 @@ def get_fleet_summary() -> str:
     """
     Return a ranked summary of ALL services showing health status, open
     incident count, SLA breach rate, and recent P1/P2 count — in one call.
-    Use this tool for queries that span multiple services at once:
-    'which services have high SLA breach rates AND open incidents?',
-    'give me a fleet-wide overview', 'which services are in trouble?',
-    'prioritise all services for the shift analyst',
-    '5-minute briefing on the whole fleet', 'shift handoff for all services'.
+
+    Use this tool ONLY when the question explicitly concerns ALL services or
+    the entire fleet at once (e.g. 'give me a fleet-wide overview',
+    'which services are in trouble across the whole fleet?',
+    'overview of all services').
+    Do NOT use this tool when the question names a specific service, asks for
+    a single-service health check, or can be answered by check_sla_breaches
+    or get_service_health with targeted filters — use those tools instead.
     This avoids calling get_service_health or check_sla_breaches once per
-    service when a fleet-wide answer is needed.
+    service when a true fleet-wide answer is needed.
 
     Returns a JSON list of all services ranked by composite risk score
     (high open incidents + high breach rate = highest risk).
@@ -407,8 +413,13 @@ TOOL USE RULES:
   tool confirm; never substitute your own knowledge for a live tool call.
 - If the user ASSERTS incident history as context (e.g. "X has had P1 incidents
   lately"), verify it with query_incidents before proceeding to other tools.
-- For fleet-wide questions (all services, prioritise the fleet, shift briefing),
-  call get_fleet_summary once instead of calling get_service_health per service.
+- Even if you believe a time range will return no data (e.g. "incidents from 10
+  years ago", "last decade", any far-past period), ALWAYS call query_incidents
+  with that range and report what the tool returns. Never substitute temporal
+  reasoning or memory for a live tool call.
+- For true fleet-wide questions (all services, whole fleet overview), call
+  get_fleet_summary once. For questions about named services or targeted
+  analysis, use get_service_health or check_sla_breaches directly.
 
 SAFETY RULES:
 - You are READ-ONLY. Never suggest, simulate, or perform any system-modifying action.
