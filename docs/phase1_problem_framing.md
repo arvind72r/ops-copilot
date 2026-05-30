@@ -131,7 +131,7 @@ any operational actions.
 - Severity levels follow standard: P1 (Critical) > P2 (High) > P3 (Medium) > P4 (Low)
 - SLA targets: P1 < 1hr MTTR, P2 < 4hr, P3 < 24hr, P4 < 72hr
 - Agent is deployed as a CLI + later API; not integrated into ticketing system for write operations
-- LLM used: Claude 3.5 Sonnet (or GPT-4o) via API
+- LLM used: GPT-4o-mini (OpenAI) via API
 
 ---
 
@@ -241,7 +241,7 @@ User (Analyst CLI / Chat)
         │
         ▼
   [LangChain Agent Orchestrator]
-  - LLM: Claude 3.5 Sonnet
+  - LLM: GPT-4o-mini (OpenAI)
   - Prompt: System + persona + safety rules
         │
      ┌──┴──────────────────┐
