@@ -68,7 +68,7 @@ def init_agent_data(
 # ─── Tool 1: Query Incidents ──────────────────────────────────────────────────
 
 @tool
-def query_incidents(service: str = "", priority: str = "", days: int = 30) -> str:
+def query_incidents(service: str = "", priority: str = "", days: int = 60) -> str:
     """
     Query incident records and return a summary matching the given filters.
     Use this tool for questions about incident counts, MTTR, open incidents,
@@ -86,7 +86,7 @@ def query_incidents(service: str = "", priority: str = "", days: int = 30) -> st
                   Leave empty to include all priorities.
                   If the user provides an invalid priority (e.g. 'P5'), still
                   call this tool — it will return a descriptive error message.
-        days: How many past days to look at (default 30, max 365).
+        days: How many past days to look at (default 60, max 365).
               Even for time ranges clearly outside the dataset (e.g. 'incidents
               from 10 years ago', 'last decade', any historical period beyond
               recent data) — ALWAYS call this tool. Never answer temporal
@@ -226,7 +226,7 @@ def get_service_health(service: str) -> str:
                  E.g. 'auth-service', 'payments-api', 'database-cluster'.
 
     Returns JSON with: health status (HEALTHY / DEGRADED / CRITICAL),
-    open incident count, recent P1/P2 count (30 days), all-time total,
+    open incident count, recent P1/P2 count (60 days), all-time total,
     SLA breach rate (%), and average MTTR in hours.
     READ-ONLY — does not modify any data.
     """
@@ -241,7 +241,7 @@ def get_service_health(service: str) -> str:
         )
 
     df      = _incidents_df[_incidents_df["service"] == svc].copy()
-    cutoff  = datetime.now() - timedelta(days=30)
+    cutoff  = datetime.now() - timedelta(days=60)
     recent  = df[df["opened_at"] >= cutoff]          # CSV column: opened_at
 
     # Status values in CSV: "Open", "In Progress", "Resolved"
@@ -263,7 +263,7 @@ def get_service_health(service: str) -> str:
         "service":               svc,
         "health_status":         health,
         "open_incidents":        len(open_inc),
-        "recent_p1_p2_30d":      len(critical_recent),
+        "recent_p1_p2_60d":      len(critical_recent),
         "all_time_total":        len(df),
         "sla_breach_rate_pct":   round(breach_rate, 1),
         "avg_mttr_hours":        round(avg_mttr_h, 1) if avg_mttr_h is not None else "N/A",
@@ -353,18 +353,18 @@ def get_fleet_summary() -> str:
     if _incidents_df is None:
         return "Error: data not initialised. Call init_agent_data() first."
 
-    cutoff = datetime.now() - timedelta(days=30)
+    cutoff = datetime.now() - timedelta(days=60)
     rows   = []
 
     for svc in KNOWN_SERVICES:
         df      = _incidents_df[_incidents_df["service"] == svc]
         recent  = df[df["opened_at"] >= cutoff]
         open_inc = int(df["status"].isin(["Open", "In Progress"]).sum())
-        p1p2_30d = int(recent["severity"].isin(["P1", "P2"]).sum())
+        p1p2_60d = int(recent["severity"].isin(["P1", "P2"]).sum())
         breach_rate = round(df["sla_breached"].eq("Yes").mean() * 100, 1) if len(df) > 0 else 0.0
 
         # Composite risk score (higher = more attention needed)
-        risk_score = open_inc * 3 + p1p2_30d * 2 + (breach_rate / 10)
+        risk_score = open_inc * 3 + p1p2_60d * 2 + (breach_rate / 10)
 
         if open_inc == 0 and breach_rate < 20:
             health = "HEALTHY"
@@ -377,7 +377,7 @@ def get_fleet_summary() -> str:
             "service":          svc,
             "health_status":    health,
             "open_incidents":   open_inc,
-            "p1_p2_last_30d":  p1p2_30d,
+            "p1_p2_last_60d":  p1p2_60d,
             "sla_breach_pct":  breach_rate,
             "risk_score":      round(risk_score, 1),
         })
